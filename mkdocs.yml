@@ -1,0 +1,28 @@
+site_name: digital-thread-copilot
+site_description: Generative AI copilot for the digital thread
+repo_url: https://github.com/TSP-UC3M/digital-thread-copilot
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+markdown_extensions:
+  - tables
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Problem statement: 00-planteamiento.md
