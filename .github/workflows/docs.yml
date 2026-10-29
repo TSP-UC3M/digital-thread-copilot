@@ -15,10 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install mkdocs-material
+      - run: pip install mkdocs-material mkdocs-static-i18n
+      - name: Check translations are up to date
+        run: python scripts/check_translations.py
       - run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
         with:

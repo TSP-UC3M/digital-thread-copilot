@@ -18,6 +18,32 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Light mode
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+          nav_translations:
+            Home: Accueil
+            Problem statement: Planteamiento
+            State of the art: État de l'art
+        - locale: es
+          name: Español
+          build: true
+          nav_translations:
+            Home: Inicio
+            Problem statement: Planteamiento
+            State of the art: Estado de la cuestión
 markdown_extensions:
   - tables
   - admonition
@@ -26,3 +52,4 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Problem statement: 00-planteamiento.md
+  - State of the art: 01-state-of-the-art.md
