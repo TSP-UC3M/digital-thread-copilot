@@ -1,4 +1,5 @@
 site_name: digital-thread-copilot
+site_url: https://tsp-uc3m.github.io/digital-thread-copilot/
 site_description: Generative AI copilot for the digital thread
 repo_url: https://github.com/TSP-UC3M/digital-thread-copilot
 theme:
