@@ -34,6 +34,9 @@ Course: Digitalización de Ingeniería de Sistemas Complejos, UC3M (2026-2027)
 
 ## Workflow
 
-- `main` holds the validated version only.
-- One branch per task: `feature/<name>`, merged through a Pull Request.
+- `main` is protected: every change goes through a pull request with passing checks.
+- One branch per task, named `<type>/<short-description>` (for example `feat/graph-ingestion`).
+- Commit messages and pull request titles follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/); pull requests are squash-merged.
 - Issues are linked to a milestone (OE1 to OE5).
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the development setup and the full workflow.
