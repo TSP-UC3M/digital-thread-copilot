@@ -22,3 +22,6 @@ site/
 
 # Secrets
 .env
+
+# Node (commitlint)
+node_modules/
