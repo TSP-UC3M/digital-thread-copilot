@@ -9,9 +9,11 @@ permissions:
   contents: read
   pages: write
   id-token: write
+# One group per ref: a pull request run can no longer cancel a deployment of main.
+# Runs on main are never cancelled once started; superseded pull request runs are.
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   build:
     runs-on: ubuntu-latest
