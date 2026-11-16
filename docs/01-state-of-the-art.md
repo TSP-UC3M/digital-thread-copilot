@@ -33,7 +33,7 @@ S1, main string:
 S2, wider string (S1 has four conjunctive groups and is expected to return few records):
 
 - Scopus: `TITLE-ABS-KEY ( ( "large language model" OR LLM OR "generative AI" OR "retrieval-augmented generation" ) AND ( MBSE OR SysML OR "model-based systems engineering" OR "digital thread" ) AND ( traceability OR "knowledge graph" OR "impact analysis" OR "question answering" ) ) AND PUBYEAR > 2019`
-- IEEE Xplore: the same three groups with "All Metadata", years 2020 to 2026
+- IEEE Xplore: `("All Metadata":"large language model" OR "All Metadata":LLM OR "All Metadata":"generative AI" OR "All Metadata":"retrieval-augmented generation") AND ("All Metadata":MBSE OR "All Metadata":SysML OR "All Metadata":"model-based systems engineering" OR "All Metadata":"digital thread") AND ("All Metadata":traceability OR "All Metadata":"knowledge graph" OR "All Metadata":"impact analysis" OR "All Metadata":"question answering")`, years 2020 to 2026 (string written in full on 2026-11-16, as run; the protocol frozen before the queries described it as "the same three groups with All Metadata")
 
 Refinement. There is no fixed cap on the number of records. If a string returns more than 100 records in one database, the string is refined until the volume is at most 100, and every iteration is recorded (string as run, date, number of records, reason for the change). A refinement may only add or tighten a group of terms; it never removes records after reading them. A cap is a last resort: if one is used, the sorting criterion (relevance as ranked by the database) and the number of records left unscreened are reported as a threat to validity.
 
@@ -41,12 +41,21 @@ Refinement. There is no fixed cap on the number of records. If a string returns 
 
 | Database | String and iteration | Date | Records returned | Reason for the change | Export file |
 | --- | --- | --- | --- | --- | --- |
-| IEEE Xplore | S1, iteration 1 | | | | |
-| IEEE Xplore | S2, iteration 1 | | | | |
-| Scopus | S1, iteration 1 | | | | |
-| Scopus | S2, iteration 1 | | | | |
+| IEEE Xplore | S1, iteration 1 (Command Search, years 2020 to 2026) | 2026-11-16, about 20:13 | 1 | None | `ieee-s1.csv` |
+| IEEE Xplore | S2, iteration 1 (Command Search, years 2020 to 2026) | 2026-11-16, about 20:13 | 13 | None | `ieee-s2.csv` |
+| Scopus | S1, iteration 1 (Advanced search, Documents) | 2026-11-16, before 20:19 | 0 | None | None (no record) |
+| Scopus | S2, iteration 1 (Advanced search, Documents) | 2026-11-16, about 20:19 | 50 | None | `scopus-s2.csv` |
 
-The exports are kept in the repository so that the counts can be recomputed.
+Queries run by Ferdinand Lacroix after the protocol was merged (pull request 6). Times are those of the export files, Europe/Paris. No string returned more than 100 records, so no refinement was made. Records identified: 64; after removal of duplicates between the result sets (by DOI, then by normalised title): 53.
+
+Reduced exports (title, year, source, type, DOI, origin) are kept in `references/search-2026-11-16/` so that the counts can be recomputed.
+
+Deviations from the protocol as frozen:
+
+- Two invalid attempts were made and are not counted. The Scopus S1 string was pasted by mistake into IEEE Xplore. The Scopus S1 string was first run in the basic search, which wrapped it in a second `TITLE-ABS-KEY` so that `PUBYEAR` ended up inside it; it was run again in the advanced search, which returned 0 record, the only result counted.
+- The IEEE Xplore S2 string was written in full only when it was run.
+- The protocol said that the exports would be kept in the repository. Only reduced exports are published, because the repository is public and the terms of use of the databases for full exports with abstracts were not established; the reason is given in the README of that folder.
+- The Scopus strings have no upper year bound. The 6 records dated 2027 are excluded under inclusion criterion 3 and counted in the flow with that reason.
 
 ### Selection
 
@@ -95,7 +104,8 @@ For each of the 8 works kept, the comparison table states its origin: IEEE Xplor
 
 ### Threats to validity
 
-- Two databases and two strings: relevant works indexed elsewhere are found only through other methods.
+- Two databases and two strings: relevant works indexed elsewhere are found only through other methods. Only 2 of the 20 works with a DOI in the candidate list of 2026-10-29 are returned by the two databases.
+- The Scopus strings set no upper bound on the year, so records dated 2027 were returned and had to be excluded at screening.
 - Recent field: many relevant works are preprints, which our quality criteria grade Weak.
 - Screening mostly by one person; the 20 % double screening only estimates the agreement, and on a small sample Cohen's kappa is unstable.
 - Refining the strings after seeing the number of results can bias the search towards expected works; every iteration is recorded for that reason.
