@@ -55,7 +55,8 @@ Deviations from the protocol as frozen:
 - Two invalid attempts were made and are not counted. The Scopus S1 string was pasted by mistake into IEEE Xplore. The Scopus S1 string was first run in the basic search, which wrapped it in a second `TITLE-ABS-KEY` so that `PUBYEAR` ended up inside it; it was run again in the advanced search, which returned 0 record, the only result counted.
 - The IEEE Xplore S2 string was written in full only when it was run.
 - The protocol said that the exports would be kept in the repository. Only reduced exports are published, because the repository is public and the terms of use of the databases for full exports with abstracts were not established; the reason is given in the README of that folder.
-- The Scopus strings have no upper year bound. The 6 records dated 2027 are excluded under inclusion criterion 3 and counted in the flow with that reason.
+- The Scopus strings have no upper year bound. The 6 records dated 2027 are excluded: 3 are whole proceedings volumes, counted under exclusion criterion 1 by step 1 of the screening procedure, and 3 are articles, counted under inclusion criterion 3. An earlier version of this page counted the 6 under inclusion criterion 3.
+- Screening with AI assistance. The protocol planned a screening by one member, with a second member on a 20 % sample. The sample (11 records) was screened in this way, by two members and without AI. For the 42 other records, each of the two members had the decisions proposed by an AI assistant from the title and the abstract, then verified and validated them; the depth of the verification varied from record to record. Details in [AI usage](ai-usage.md).
 
 Interpretation of the criteria, fixed on 2026-11-16 before the screening and given to both screeners: a record that describes a whole proceedings volume (type "Conference review" in Scopus) is not an individual work and is excluded under exclusion criterion 1. The protocol does not name this case; 12 of the 53 records are of this type.
 
@@ -69,6 +70,11 @@ Screening procedure (communicated to both screeners on 2026-11-16 before screeni
 6. Otherwise include. In case of doubt from the abstract alone, the record is included and flagged; the doubt is settled on the full text.
 
 The evidence that this procedure predates the screening is its sending to the second screener, not a commit: it was written into this page after the double screening of the sample.
+
+Clarifications decided by both screeners on 2026-11-16, after the double screening of the sample. They are not part of the procedure above and do not change the decisions used for the agreement:
+
+- A literature review without its own evaluation is excluded under exclusion criterion 1, at step 1. Effect: one record of the sample (R37), excluded by both screeners under different criteria, is counted under exclusion criterion 1.
+- 3D CAD geometry is not a system model in the sense of inclusion criterion 1. This rule is applied at the full-text stage; at the title and abstract stage the record concerned (R42) stays included with a doubt, as both screeners decided.
 
 ### Selection
 
@@ -115,6 +121,38 @@ For each of the 8 works kept, the comparison table states its origin: IEEE Xplor
 | Full texts excluded, with reasons | | |
 | Works included | | |
 
+### Result of the screening (title and abstract)
+
+Database records, screened on 2026-11-16. Decisions per record: `references/search-2026-11-16/screening-decisions.csv`; decisions of both screeners on the sample: `screening-sample.csv` in the same folder. Both files and the counts below are produced by `scripts/screening_flow.py`.
+
+| Stage | Count |
+| --- | --- |
+| Records identified (IEEE Xplore S1: 1, S2: 13; Scopus S1: 0, S2: 50) | 64 |
+| Duplicates removed | 11 |
+| Records screened (title and abstract) | 53 |
+| Records excluded | 26 |
+| of which exclusion criterion 1 (12 are whole proceedings volumes) | 18 |
+| of which exclusion criterion 2 | 3 |
+| of which inclusion criterion 3 (articles dated 2027) | 3 |
+| of which inclusion criterion 1 | 1 |
+| of which exclusion criterion 4 | 1 |
+| Records sent to full-text assessment (14 are flagged as doubtful) | 27 |
+
+Full-text assessment and the works found by other methods are not reported yet.
+
+Agreement on the double screening sample (11 records, screened without AI by Ferdinand Lacroix and Séléné Colle Conte):
+
+| | Screener 2: include | Screener 2: exclude |
+| --- | --- | --- |
+| Screener 1: include | 5 | 0 |
+| Screener 1: exclude | 0 | 6 |
+
+Observed agreement 1.0, expected agreement 0.504, Cohen's kappa 1.0 [M5]. On 11 records this value is unstable and says little beyond the absence of disagreement on this sample. One record (R37) was excluded by both screeners under different criteria.
+
+For the 42 other records, the two AI-assisted files gave the same decision on 39 records and differed on 3 (R25, R31, R46), which are kept for full-text assessment under the doubt rule. This figure is not an agreement in the sense of the protocol: both files started from the same sheet, which showed the first screener's decisions on the sample.
+
+Of the 26 exclusions, 6 belong to the sample, 13 follow mechanically from the type or the year of the record (10 proceedings volumes outside the sample, 3 articles dated 2027), and 7 rest on a judgement made with AI assistance (R16, R17, R18, R19, R39, R44, R52); these 7 were re-read by the members.
+
 ### Threats to validity
 
 - Two databases and two strings: relevant works indexed elsewhere are found only through other methods. Only 2 of the 20 works with a DOI in the candidate list of 2026-10-29 are returned by the two databases.
@@ -124,6 +162,7 @@ For each of the 8 works kept, the comparison table states its origin: IEEE Xplor
 - Refining the strings after seeing the number of results can bias the search towards expected works; every iteration is recorded for that reason.
 - The candidate list of 2026-10-29 was seen before this protocol was written, which can bias the criteria.
 - Citation counts and rankings are read on a given date and change.
+- Only the sample of 11 records was screened without AI. The 42 other records were screened with an AI assistant and then verified by the members, to a varying depth. An inclusion made in error is caught at the full-text stage; an exclusion made in error is not, which is why the 7 exclusions that rest on a judgement were re-read.
 
 ### Methodological references
 
