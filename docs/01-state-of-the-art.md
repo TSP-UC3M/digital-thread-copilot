@@ -59,6 +59,17 @@ Deviations from the protocol as frozen:
 
 Interpretation of the criteria, fixed on 2026-11-16 before the screening and given to both screeners: a record that describes a whole proceedings volume (type "Conference review" in Scopus) is not an individual work and is excluded under exclusion criterion 1. The protocol does not name this case; 12 of the 53 records are of this type.
 
+Screening procedure (communicated to both screeners on 2026-11-16 before screening; committed after). The protocol frozen before the queries lists the criteria but neither the order in which they are applied nor what to do in case of doubt. Both screeners received and applied the following steps; an excluded record is counted under one criterion, the first that applies in this order:
+
+1. Whole proceedings volume, editorial, tutorial or position text without results: exclude, exclusion criterion 1. Year outside 2020 to 2026 or not in English: exclude, inclusion criterion 3.
+2. No large language model or generative AI: exclude, inclusion criterion 1.
+3. The model does not work on engineering artifacts (requirements, system models, tests, or their links): code only, exclusion criterion 4; manufacturing or operations data only, exclusion criterion 2; otherwise inclusion criterion 1.
+4. None of traceability, impact analysis, question answering over models, knowledge graph or ontology of the artifacts, generation of artifacts with validation: exclude, inclusion criterion 2.
+5. No evaluation or demonstration on a set of artifacts: exclude, exclusion criterion 1.
+6. Otherwise include. In case of doubt from the abstract alone, the record is included and flagged; the doubt is settled on the full text.
+
+The evidence that this procedure predates the screening is its sending to the second screener, not a commit: it was written into this page after the double screening of the sample.
+
 ### Selection
 
 Inclusion criteria (all must hold):
