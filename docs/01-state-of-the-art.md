@@ -57,6 +57,8 @@ Deviations from the protocol as frozen:
 - The protocol said that the exports would be kept in the repository. Only reduced exports are published, because the repository is public and the terms of use of the databases for full exports with abstracts were not established; the reason is given in the README of that folder.
 - The Scopus strings have no upper year bound. The 6 records dated 2027 are excluded under inclusion criterion 3 and counted in the flow with that reason.
 
+Interpretation of the criteria, fixed on 2026-11-16 before the screening and given to both screeners: a record that describes a whole proceedings volume (type "Conference review" in Scopus) is not an individual work and is excluded under exclusion criterion 1. The protocol does not name this case; 12 of the 53 records are of this type.
+
 ### Selection
 
 Inclusion criteria (all must hold):
