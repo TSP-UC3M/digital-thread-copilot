@@ -1,15 +1,119 @@
 # Preliminary state of the art
 
 !!! warning "Draft"
-    Candidate list prepared for group selection. The group still has to (1) repeat the search in two bibliographic databases, (2) select the works to keep, (3) read the three closest works in full, and (4) update citation counts from Google Scholar.
+    Candidate list prepared for group selection from a web search, before the search protocol below was fixed. The group still has to (1) run the search in the two bibliographic databases of the protocol, (2) select the works to keep, (3) read the three closest works in full, and (4) update citation counts from Google Scholar.
 
 ## Search protocol
 
-- **Main search string:** `("digital thread" OR "authoritative source of truth") AND ("knowledge graph" OR ontology) AND ("large language model" OR LLM OR "generative AI") AND (MBSE OR SysML OR traceability)`
-- **Complementary strings:** `"large language model" AND SysML`, `"retrieval-augmented generation" AND traceability`, `"knowledge graph" AND "large language model" AND roadmap`, `"digital thread" AND review`
-- **Date of search:** 2026-10-29
-- **Sources used for this draft:** web search, publisher pages and Crossref metadata (DOI, venue, citation count)
-- **Bibliographic databases (to be completed by the group):** e.g. IEEE Xplore and Scopus, through the UC3M library
+Protocol fixed on 2026-11-16, before any query in a bibliographic database. It is a scoped review carried out by three students in a few hours, not a full systematic literature review; its structure follows the guidelines of Kitchenham and Charters [M3], complemented by [M4], and its reporting follows the flow of PRISMA 2020 [M1].
+
+### Question
+
+Which published approaches let an engineer query or act on a digital thread (requirements, system models, tests) through a large language model, and how do they ground their answers in the links between artifacts?
+
+Each work is read for: (a) the artifacts and standards involved; (b) the grounding mechanism (retrieval over text, knowledge graph, tools); (c) how the approach is evaluated, against which baseline and with which metrics.
+
+### Sources
+
+| Source | Access | Fields searched |
+| --- | --- | --- |
+| IEEE Xplore | UC3M library | All Metadata (command search) |
+| Scopus | UC3M library | Title, abstract, keywords |
+| Other methods | See below | |
+
+### Search strings
+
+Period: 2020 to 2026. The question concerns systems built on large language models, and we take GPT-3, described in 2020 [M6], as the first model usable for the tasks studied here; this starting point is our choice, not a claim of that paper. Earlier foundational works, for example on the digital thread or on traceability, are not excluded from the state of the art: they enter through snowballing or other methods and are labelled as such. Language: English.
+
+S1, main string:
+
+- Scopus: `TITLE-ABS-KEY ( ( "digital thread" OR "authoritative source of truth" ) AND ( "knowledge graph" OR ontology ) AND ( "large language model" OR LLM OR "generative AI" ) AND ( MBSE OR SysML OR traceability ) ) AND PUBYEAR > 2019`
+- IEEE Xplore: `("All Metadata":"digital thread" OR "All Metadata":"authoritative source of truth") AND ("All Metadata":"knowledge graph" OR "All Metadata":ontology) AND ("All Metadata":"large language model" OR "All Metadata":LLM OR "All Metadata":"generative AI") AND ("All Metadata":MBSE OR "All Metadata":SysML OR "All Metadata":traceability)`, years 2020 to 2026
+
+S2, wider string (S1 has four conjunctive groups and is expected to return few records):
+
+- Scopus: `TITLE-ABS-KEY ( ( "large language model" OR LLM OR "generative AI" OR "retrieval-augmented generation" ) AND ( MBSE OR SysML OR "model-based systems engineering" OR "digital thread" ) AND ( traceability OR "knowledge graph" OR "impact analysis" OR "question answering" ) ) AND PUBYEAR > 2019`
+- IEEE Xplore: the same three groups with "All Metadata", years 2020 to 2026
+
+Refinement. There is no fixed cap on the number of records. If a string returns more than 100 records in one database, the string is refined until the volume is at most 100, and every iteration is recorded (string as run, date, number of records, reason for the change). A refinement may only add or tighten a group of terms; it never removes records after reading them. A cap is a last resort: if one is used, the sorting criterion (relevance as ranked by the database) and the number of records left unscreened are reported as a threat to validity.
+
+### Record of the queries
+
+| Database | String and iteration | Date | Records returned | Reason for the change | Export file |
+| --- | --- | --- | --- | --- | --- |
+| IEEE Xplore | S1, iteration 1 | | | | |
+| IEEE Xplore | S2, iteration 1 | | | | |
+| Scopus | S1, iteration 1 | | | | |
+| Scopus | S2, iteration 1 | | | | |
+
+The exports are kept in the repository so that the counts can be recomputed.
+
+### Selection
+
+Inclusion criteria (all must hold):
+
+1. The work uses a large language model on systems engineering or software engineering artifacts (requirements, models, tests, or the links between them).
+2. It addresses at least one of: traceability, impact analysis, question answering over models, a knowledge graph or ontology of the artifacts, generation of model or test artifacts with validation.
+3. It is a journal article, a conference paper or a preprint with identifiable authors, in English, dated 2020 to 2026.
+
+Exclusion criteria (any one excludes):
+
+1. No evaluation or demonstration on a set of artifacts (position papers, editorials, tutorials).
+2. The digital thread or the knowledge graph concerns manufacturing or operations data only, with no engineering artifacts.
+3. Full text not accessible through UC3M, or duplicate of a record already kept (the journal version is kept over the preprint).
+4. Code generation or code completion only.
+
+Steps:
+
+1. Remove duplicates between the result sets.
+2. Screen titles and abstracts against the criteria, by one member. A second member, the one who does not run the searches, independently screens a random 20 % of the titles, drawn with a recorded seed. The agreement is reported as Cohen's kappa [M5] together with the 2 x 2 table of decisions, without a qualitative label; disagreements are resolved by discussion and counted.
+3. Read the full text of the remaining records.
+4. Apply the quality criteria of the next section to each.
+5. Keep 8 works, of which at least 3 papers and 1 tool. When more than 8 pass, they are ranked by verdict (Strong before Adequate), then by the number of reading points (a) to (c) they answer, then by year. The 3 closest works are read in full.
+
+### Other methods
+
+Counted separately in the flow, never merged with the database counts:
+
+- the candidates of the web search of 2026-10-29 (strings and sources: main string above and the complementary strings `"large language model" AND SysML`, `"retrieval-augmented generation" AND traceability`, `"knowledge graph" AND "large language model" AND roadmap`, `"digital thread" AND review`; web search, publisher pages and Crossref metadata) that the two databases do not return;
+- backward and forward snowballing from the works kept, limited to one level [M2];
+- tools and standards, which are not indexed as papers and are found on vendor or project sites.
+
+For each of the 8 works kept, the comparison table states its origin: IEEE Xplore, Scopus, both, or other method.
+
+### Flow to report
+
+| Stage | Databases | Other methods |
+| --- | --- | --- |
+| Records identified | per database and string | per method |
+| Duplicates removed | | |
+| Records screened (title and abstract) | | |
+| Records excluded, with the count per exclusion criterion | | |
+| Full texts assessed | | |
+| Full texts excluded, with reasons | | |
+| Works included | | |
+
+### Threats to validity
+
+- Two databases and two strings: relevant works indexed elsewhere are found only through other methods.
+- Recent field: many relevant works are preprints, which our quality criteria grade Weak.
+- Screening mostly by one person; the 20 % double screening only estimates the agreement, and on a small sample Cohen's kappa is unstable.
+- Refining the strings after seeing the number of results can bias the search towards expected works; every iteration is recorded for that reason.
+- The candidate list of 2026-10-29 was seen before this protocol was written, which can bias the criteria.
+- Citation counts and rankings are read on a given date and change.
+
+### Methodological references
+
+Checked on 2026-11-16. BibTeX entries: `docs/references.bib`.
+
+| # | Reference | Type | Citations (source) | Venue quality | Verdict |
+| --- | --- | --- | --- | --- | --- |
+| M1 | M. J. Page et al., "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews," *BMJ*, vol. 372, n71, 2021, doi: [10.1136/bmj.n71](https://doi.org/10.1136/bmj.n71) | Journal article, peer reviewed | 194 613 (Google Scholar), 87 502 (Crossref) | SJR 2025: Q1 | Strong |
+| M2 | C. Wohlin, "Guidelines for snowballing in systematic literature studies and a replication in software engineering," in *Proc. 18th Int. Conf. Evaluation and Assessment in Software Engineering (EASE '14)*, 2014, pp. 1-10, doi: [10.1145/2601248.2601268](https://doi.org/10.1145/2601248.2601268) | Conference paper | 2 880 (Crossref) | ICORE2026: A | Strong |
+| M3 | B. Kitchenham and S. Charters, "Guidelines for performing systematic literature reviews in software engineering," version 2.3, Keele University and University of Durham, EBSE Tech. Rep. EBSE-2007-01, Jul. 2007. [Online]. Available: <https://www.elsevier.com/__data/promis_misc/525444systematicreviewsguide.pdf> | Technical report, not peer reviewed | Not in Crossref | Not applicable | Adequate |
+| M4 | B. A. Kitchenham, D. Budgen, and P. Brereton, *Evidence-Based Software Engineering and Systematic Reviews*. Boca Raton, FL, USA: CRC Press, 2016, ISBN 978-1-4822-2866-3 (electronic edition; the print edition is dated November 2015 by booksellers) | Book | Not applicable | Not applicable | Adequate |
+| M5 | J. Cohen, "A coefficient of agreement for nominal scales," *Educational and Psychological Measurement*, vol. 20, no. 1, pp. 37-46, 1960, doi: [10.1177/001316446002000104](https://doi.org/10.1177/001316446002000104) | Journal article | 32 214 (Crossref) | SJR quartile not read yet | Strong, pending the quartile |
+| M6 | T. B. Brown et al., "Language models are few-shot learners," in *Advances in Neural Information Processing Systems 33 (NeurIPS 2020)*, 2020, pp. 1877-1901, arXiv: [2005.14165](https://arxiv.org/abs/2005.14165) | Conference paper | Not in Crossref | CORE rank not read yet | Strong, pending the rank |
 
 ## Quality criteria
 
