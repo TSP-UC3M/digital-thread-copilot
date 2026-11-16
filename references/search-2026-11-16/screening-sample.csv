@@ -1,0 +1,12 @@
+id,screener_1_decision,screener_1_criterion,screener_2_decision,screener_2_criterion
+R01,exclude,EC1,exclude,EC1
+R14,include,,include,
+R21,exclude,EC2,exclude,EC2
+R22,exclude,EC1,exclude,EC1
+R26,include,,include,
+R33,include,,include,
+R37,exclude,IC1,exclude,EC1
+R41,exclude,EC1,exclude,EC1
+R42,include,,include,
+R48,include,,include,
+R53,exclude,EC4,exclude,EC4
