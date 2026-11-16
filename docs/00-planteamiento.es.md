@@ -86,7 +86,7 @@ Existen herramientas de gestión del ciclo de vida basadas en OSLC, plataformas 
 
 - _Herramienta:_ Claude (Anthropic). _Uso:_ propuesta de estructura, borrador de redacción y traducción del planteamiento, revisados y validados por el grupo.
 - _Herramienta:_ Claude (Anthropic). _Fechas:_ 15 y 16 de noviembre de 2026. _Uso (encuadre del proyecto):_ diagnóstico del fallo del workflow de documentación y redacción de su corrección; estimaciones de esfuerzo y escenarios de alcance; tablas de opciones con una recomendación para cada decisión de encuadre; propuesta de separar la hipótesis en un criterio principal y uno secundario, y propuesta de definición del criterio principal (umbrales, configuraciones de referencia, prueba pareada); listas de verificación de las referencias; revisión independiente del encuadre por un segundo agente de IA. _Revisión por el grupo:_ cada decisión fue tomada por un miembro del grupo a partir de las opciones presentadas, y el encuadre se somete a la aprobación de los tres miembros en el ADR-0001 (`docs/adr/0001-project-framing.md`). La solicitud de validación enviada al profesor el 15 de noviembre de 2026 fue redactada por el grupo.
-- _Por completar con cada uso posterior (sinónimos de búsqueda, resúmenes, maquetación de la página, etc.)._
+- Los usos posteriores se recogen en la página [Uso de la IA](ai-usage.md) (en inglés).
 
 La hipótesis y los objetivos son decisión del grupo.
 
