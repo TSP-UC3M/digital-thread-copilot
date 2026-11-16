@@ -38,6 +38,7 @@ plugins:
             Home: Accueil
             Problem statement: Énoncé du problème
             State of the art: État de l'art
+            AI usage: Usage de l'IA
         - locale: es
           name: Español
           build: true
@@ -45,6 +46,7 @@ plugins:
             Home: Inicio
             Problem statement: Planteamiento
             State of the art: Estado de la cuestión
+            AI usage: Uso de la IA
 markdown_extensions:
   - tables
   - admonition
@@ -54,3 +56,4 @@ nav:
   - Home: index.md
   - Problem statement: 00-planteamiento.md
   - State of the art: 01-state-of-the-art.md
+  - AI usage: ai-usage.md
