@@ -36,7 +36,7 @@ plugins:
           build: true
           nav_translations:
             Home: Accueil
-            Problem statement: Planteamiento
+            Problem statement: Énoncé du problème
             State of the art: État de l'art
         - locale: es
           name: Español

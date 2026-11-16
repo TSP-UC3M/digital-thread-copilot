@@ -82,6 +82,7 @@ There are OSLC-based life cycle management tools, commercial digital thread plat
 ## AI usage statement
 
 - _Tool:_ Claude (Anthropic). _Use:_ proposed structure, draft wording and translation of the problem statement, reviewed and validated by the group.
+- _Tool:_ Claude (Anthropic). _Dates:_ 2026-11-15 and 2026-11-16. _Use (project framing):_ diagnosis of the failed documentation workflow and wording of its fix; effort estimates and scope scenarios; option tables with a recommendation for each framing decision; proposal to split the hypothesis into a primary and a secondary criterion and proposed definition of the primary criterion (thresholds, reference configurations, paired test); checklists for the verification of references; an independent review of the framing by a second AI agent. _Review by the group:_ every decision was taken by a group member from the options presented, and the framing is submitted to the three members for approval in ADR-0001 (`docs/adr/0001-project-framing.md`). The validation request sent to the professor on 2026-11-15 was written by the group.
 - _To be completed with every later use (search synonyms, summaries, page layout, etc.)._
 
 The hypothesis and the objectives are the group's decision.

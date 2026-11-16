@@ -85,6 +85,7 @@ Il existe des outils de gestion du cycle de vie basés sur OSLC, des plateformes
 ## Déclaration d'usage de l'IA
 
 - _Outil :_ Claude (Anthropic). _Usage :_ proposition de structure, brouillon de rédaction et traduction du planteamiento, revus et validés par le groupe.
+- _Outil :_ Claude (Anthropic). _Dates :_ 15 et 16 novembre 2026. _Usage (cadrage du projet) :_ diagnostic de l'échec du workflow de documentation et rédaction de son correctif ; estimations d'effort et scénarios de périmètre ; tableaux d'options avec une recommandation pour chaque décision de cadrage ; proposition de scinder l'hypothèse en un critère principal et un critère secondaire, et proposition de définition du critère principal (seuils, configurations de référence, test apparié) ; listes de vérification des références ; relecture indépendante du cadrage par un second agent d'IA. _Revue par le groupe :_ chaque décision a été prise par un membre du groupe à partir des options présentées, et le cadrage est soumis à l'approbation des trois membres dans l'ADR-0001 (`docs/adr/0001-project-framing.md`). La demande de validation envoyée au professeur le 15 novembre 2026 a été rédigée par le groupe.
 - _À compléter à chaque usage ultérieur (synonymes de recherche, résumés, mise en page du site, etc.)._
 
 L'hypothèse et les objectifs sont des décisions du groupe.
