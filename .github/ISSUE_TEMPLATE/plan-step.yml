@@ -1,0 +1,37 @@
+name: Plan step or task
+description: A unit of work with a deliverable and a measurable end criterion
+title: "[<ID>] "
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What the step achieves, in one sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: Files or objects produced, with their path in the repository.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: End criterion that can be measured (value obtained against a threshold).
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Required by
+      description: Course document and page, requirement identifier, or "proposed".
+    validations:
+      required: true
+  - type: input
+    id: deps
+    attributes:
+      label: Depends on
+      description: Identifiers of the steps or decisions this one waits for.

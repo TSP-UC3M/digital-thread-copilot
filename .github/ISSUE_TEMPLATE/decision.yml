@@ -1,0 +1,30 @@
+name: Decision
+description: A choice of scope, method or architecture to take and to record as an ADR
+labels: ["type:decision"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: The decision to take and why it is needed now.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: At least 2 options, each with its advantages and drawbacks.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Decide by
+      description: Date, and the steps that wait for this decision.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Filled when the decision is taken (option, decider, date, ADR number).
