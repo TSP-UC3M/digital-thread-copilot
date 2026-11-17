@@ -1,0 +1,132 @@
+[
+  {
+    "name": "type:feature",
+    "color": "1d76db",
+    "description": "New capability of the system"
+  },
+  {
+    "name": "type:docs",
+    "color": "0075ca",
+    "description": "Documentation only"
+  },
+  {
+    "name": "type:ci",
+    "color": "5319e7",
+    "description": "Continuous integration and delivery"
+  },
+  {
+    "name": "type:test",
+    "color": "0e8a16",
+    "description": "Tests only"
+  },
+  {
+    "name": "type:research",
+    "color": "c5def5",
+    "description": "State of the art and evaluation method"
+  },
+  {
+    "name": "type:bug",
+    "color": "d73a4a",
+    "description": "Something does not work as specified"
+  },
+  {
+    "name": "type:decision",
+    "color": "fbca04",
+    "description": "Decision to take or to record as an ADR"
+  },
+  {
+    "name": "area:research",
+    "color": "bfd4f2",
+    "description": "Block A: Activity 0 and state of the art"
+  },
+  {
+    "name": "area:process",
+    "color": "bfd4f2",
+    "description": "Blocks B and L: Scrum process and coordination"
+  },
+  {
+    "name": "area:design",
+    "color": "bfd4f2",
+    "description": "Block C: requirements, decisions, architecture"
+  },
+  {
+    "name": "area:data",
+    "color": "bfd4f2",
+    "description": "Block D: case study data"
+  },
+  {
+    "name": "area:ontology",
+    "color": "bfd4f2",
+    "description": "Block E: ontology and shapes"
+  },
+  {
+    "name": "area:platform",
+    "color": "bfd4f2",
+    "description": "Block F: skeleton, CI/CD, quality"
+  },
+  {
+    "name": "area:ingestion",
+    "color": "bfd4f2",
+    "description": "Block G: ingestion"
+  },
+  {
+    "name": "area:copilot",
+    "color": "bfd4f2",
+    "description": "Block H: tools and copilot"
+  },
+  {
+    "name": "area:evaluation",
+    "color": "bfd4f2",
+    "description": "Block I: evaluation of the hypothesis"
+  },
+  {
+    "name": "area:docs-vv",
+    "color": "bfd4f2",
+    "description": "Block J: documentation and final verification and validation"
+  },
+  {
+    "name": "area:delivery",
+    "color": "bfd4f2",
+    "description": "Block K: delivery and defense"
+  },
+  {
+    "name": "priority:must",
+    "color": "b60205",
+    "description": "Required by the statement or by the pass condition"
+  },
+  {
+    "name": "priority:should",
+    "color": "d93f0b",
+    "description": "Planned if time allows"
+  },
+  {
+    "name": "priority:could",
+    "color": "fef2c0",
+    "description": "Optional"
+  },
+  {
+    "name": "sprint:1",
+    "color": "ededed",
+    "description": "2026-11-16 to 2026-11-22"
+  },
+  {
+    "name": "sprint:2",
+    "color": "ededed",
+    "description": "2026-11-23 to 2026-11-29"
+  },
+  {
+    "name": "sprint:3",
+    "color": "ededed",
+    "description": "2026-11-30 to 2026-12-06"
+  },
+  {
+    "name": "sprint:4",
+    "color": "ededed",
+    "description": "2026-12-07 to 2026-12-10"
+  },
+  {
+    "name": "status:waits-validation",
+    "color": "000000",
+    "description": "Cannot start before the professor validates the objectives"
+  }
+]

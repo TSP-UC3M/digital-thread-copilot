@@ -1,0 +1,1000 @@
+{
+  "project_title": "digital-thread-copilot",
+  "milestones": [
+    {
+      "title": "OE1",
+      "due": "2026-11-22",
+      "description": "Analyze the state of the art on digital threads, knowledge graphs and LLMs applied to MBSE"
+    },
+    {
+      "title": "OE2",
+      "due": "2026-11-27",
+      "description": "Design the system architecture and the digital thread ontology"
+    },
+    {
+      "title": "OE3",
+      "due": "2026-11-29",
+      "description": "Implement the ingestion of artifacts into the knowledge graph"
+    },
+    {
+      "title": "OE4",
+      "due": "2026-12-06",
+      "description": "Implement the copilot with deterministic tools and guardrails"
+    },
+    {
+      "title": "OE5",
+      "due": "2026-12-08",
+      "description": "Evaluate the hypothesis with a set of reference questions"
+    },
+    {
+      "title": "Process and delivery",
+      "due": "2026-12-10",
+      "description": "Scrum process, platform, documentation, final verification and delivery (steps that serve all objectives)"
+    }
+  ],
+  "issues": [
+    {
+      "id": "A1",
+      "title": "[A1] Find out why `docs` runs 4 and 5 failed and get the pipeline green on main",
+      "body": "**Objective.** Find out why `docs` runs 4 and 5 failed and get the pipeline green on main\n\n**Deliverable.** Green `docs` run on the HEAD of main; fix pull request if needed\n\n**Done when.** The Actions page shows build and deploy jobs successful for the HEAD commit of main; the published site shows the same content as `docs/` at that commit on 3 pages checked by a second member\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 p. 4 (page generated automatically); PF p. 9 |\n| Depends on | none |\n| Due | 2026-11-17 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 0.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A1`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": "Done on 2026-11-15: commit 078d3eb (pull request 3)."
+    },
+    {
+      "id": "A2",
+      "title": "[A2] Get hypothesis and OE1 to OE5 validated by the professor (tutoring Wednesday 11:00 to 13:00, office...",
+      "body": "**Objective.** Get hypothesis and OE1 to OE5 validated by the professor (tutoring Wednesday 11:00 to 13:00, office 2.1.B.07, or class of 2026-11-19) and give him access to the repository\n\n**Deliverable.** Issue \"Validation of objectives\" with date, remarks and resulting changes\n\n**Done when.** The issue is closed and contains the validation date, the list of the professor's remarks (possibly empty) and, for each remark, a commit hash or \"no change\"; the professor's GitHub account or his written confirmation of access is recorded\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 p. 2 (\"Ningún grupo empieza a desarrollar sin objetivos validados\"), p. 4 |\n| Depends on | none |\n| Due | 2026-11-19 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 1.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A2`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "A3",
+      "title": "[A3] Apply R1 to every work kept from the draft state of the art",
+      "body": "**Objective.** Apply R1 to every work kept from the draft state of the art\n\n**Deliverable.** `docs/01-state-of-the-art.md` with verified metadata and final verdicts\n\n**Done when.** At least 6 works kept, of which at least 3 papers and 1 tool; each kept entry has a resolving DOI or URL, citation count with date, SJR quartile or CORE rank read on the SJR or CORE portal, publication type, verdict; 0 occurrence of \"approx.\" or \"to check\"; a script that resolves every DOI and URL reports 0 failure; the 4 entries dated 2026 (items 1, 16, 21, 27) and tool T6 are checked by a human against the publisher page\n\n**Amendment of the reduced scope (S2).** 8 works kept, of which at least 3 papers and 1 tool. Comes after A4.\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 p. 3 to 4; A0S slides 11 to 12; R1 |\n| Depends on | none |\n| Due | 2026-11-19 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A3`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "A4",
+      "title": "[A4] Repeat the search in at least 2 bibliographic databases through the UC3M VPN",
+      "body": "**Objective.** Repeat the search in at least 2 bibliographic databases through the UC3M VPN\n\n**Deliverable.** Search protocol section: strings, date, databases, hits, inclusion and exclusion criteria\n\n**Done when.** At least 2 databases among IEEE Xplore, ACM DL, Scopus, Web of Science, SpringerLink, Wiley; for each database and string: date and number of hits; at least 3 inclusion and 3 exclusion criteria; number of works screened, excluded and kept adds up\n\n**Amendment of the reduced scope (S2).** Databases: IEEE Xplore and Scopus. Works from other sources are counted separately in the flow.\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 p. 3; A0S slide 13 |\n| Depends on | none |\n| Due | 2026-11-19 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A4`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "A5",
+      "title": "[A5] Read the 3 closest works in full",
+      "body": "**Objective.** Read the 3 closest works in full\n\n**Deliverable.** 3 reading notes in `docs/01-state-of-the-art.md` or `docs/reading-notes/`\n\n**Done when.** 3 notes, each of at least 200 words, naming the reader, the method, the metrics, the result and the limitation with respect to our problem; each of the 3 members can answer 2 questions on one note asked by another member\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 p. 4 (AI policy, point 2) |\n| Depends on | A3 |\n| Due | 2026-11-22 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 4.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A5`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez",
+        "Selen-e",
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "A6",
+      "title": "[A6] Finalize the problem statement page",
+      "body": "**Objective.** Finalize the problem statement page\n\n**Deliverable.** `docs/00-planteamiento.md` and its FR and ES versions (subject to T10)\n\n**Done when.** A search for \"to be completed\", \"por completar\" and \"à compléter\" in `docs/` returns 0 line; the comparison table has at least 6 rows with the 5 required columns; the Draft banner is removed; the AI statement lists every use since 2026-10-22 with tool and purpose; `check_translations.py --strict` exits 0; `mkdocs build --strict` passes; a reviewer who is not the author ticks the 10 items of the professor checklist (A0 p. 6) in the pull request\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 p. 3 to 5 |\n| Depends on | A2, A3, A4 |\n| Due | 2026-11-20 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A6`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "A7",
+      "title": "[A7] Tag the validated statement",
+      "body": "**Objective.** Tag the validated statement\n\n**Deliverable.** Tag `v0.1-planteamiento` on main\n\n**Done when.** `git ls-remote --tags origin` lists `v0.1-planteamiento`; the tagged commit contains the merge of A6\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 p. 1, p. 4, p. 6 |\n| Depends on | A1, A2, A6 |\n| Due | 2026-11-20 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 0.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A7`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "A8",
+      "title": "[A8] Fix the French navigation label of the problem statement page",
+      "body": "**Objective.** Fix the French navigation label of the problem statement page\n\n**Deliverable.** `mkdocs.yml`\n\n**Done when.** The French site shows the French title and the strict build passes\n\n| Field | Value |\n| --- | --- |\n| Required by | proposed (defect found in the A1 check) |\n| Depends on | A1 |\n| Due | 2026-11-16 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 0.25 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan A8`.\n",
+      "labels": [
+        "area:research",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE1",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": "Done on 2026-11-16: commit bd427ba (pull request 4)."
+    },
+    {
+      "id": "B1",
+      "title": "[B1] Configure the planning tool",
+      "body": "**Objective.** Configure the planning tool\n\n**Deliverable.** GitHub Project with 4 iterations, labels as code, issue and pull request templates, due dates on milestones\n\n**Done when.** 4 iterations with the dates of section 3; at least 8 custom labels (type, area, priority) defined in a file under `.github/` and applied by a workflow; at least 3 issue forms and 1 pull request template containing the R5 checklist; each of the 5 milestones has a due date\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 8 (Scrum, sprints, issues, labels; automated tool configuration) |\n| Depends on | none |\n| Due | 2026-11-17 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan B1`.\n",
+      "labels": [
+        "area:process",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "B2",
+      "title": "[B2] Create the backlog from this plan",
+      "body": "**Objective.** Create the backlog from this plan\n\n**Deliverable.** One issue per step from A to K\n\n**Done when.** Every step ID of this plan appears in exactly one issue title; 0 issue without milestone, iteration, assignee and priority label\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 8; A0 p. 3 (OE identifiers reused in issues) |\n| Depends on | B1 |\n| Due | 2026-11-17 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 1.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan B2`.\n",
+      "labels": [
+        "area:process",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "B3",
+      "title": "[B3] Name the team leader and the roles",
+      "body": "**Objective.** Name the team leader and the roles\n\n**Deliverable.** `docs/team.md` and `CODEOWNERS`\n\n**Done when.** The file names 1 leader and 1 role per member, and a responsibility table gives an owner and a reviewer for each block A to K; `CODEOWNERS` matches the table\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 1 (role of each member, 360 evaluation, team leader) |\n| Depends on | T13 |\n| Due | 2026-11-17 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan B3`.\n",
+      "labels": [
+        "area:process",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "B4",
+      "title": "[B4] Verify and record branch protection",
+      "body": "**Objective.** Verify and record branch protection\n\n**Deliverable.** Ruleset exported under `.github/rulesets/`\n\n**Done when.** A direct push to main by a non-admin member is rejected (output pasted in the issue); the ruleset requires 1 approval and the checks commitlint, build and, once F2 exists, lint and test\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 8 (branches configured appropriately) |\n| Depends on | none |\n| Due | 2026-11-18 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan B4`.\n",
+      "labels": [
+        "area:process",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "B5",
+      "title": "[B5] Automate the R5 local checks",
+      "body": "**Objective.** Automate the R5 local checks\n\n**Deliverable.** One command (for example `make check` or a pre-push hook) documented in `CONTRIBUTING.md`\n\n**Done when.** The command runs the 4 checks of R5 and exits 0 on a clean main; it exits non-zero when a test is broken on purpose and when the last commit message is invalid (both shown in the pull request)\n\n| Field | Value |\n| --- | --- |\n| Required by | proposed (R5) |\n| Depends on | none |\n| Due | 2026-11-18 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 1.5 h |\n| Priority | S (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan B5`.\n",
+      "labels": [
+        "area:process",
+        "priority:should",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "B6",
+      "title": "[B6] Keep Scrum evidence for each sprint",
+      "body": "**Objective.** Keep Scrum evidence for each sprint\n\n**Deliverable.** `docs/process/sprint-1.md` to `sprint-4.md`\n\n**Done when.** 4 files, each with sprint goal, issues committed, issues done, hours planned and spent, and a retrospective with at least 1 action that has an owner\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 8; PF p. 1 (process is part of the 50 %) |\n| Depends on | B1 |\n| Due | end of each sprint |\n| Sprint | S1 to S4 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan B6`.\n",
+      "labels": [
+        "area:process",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "C0",
+      "title": "[C0] Record the use of MADR and the project framing",
+      "body": "**Objective.** Record the use of MADR and the project framing\n\n**Deliverable.** `docs/adr/0000-use-madr.md`, `docs/adr/0001-project-framing.md`\n\n**Done when.** Pull request approved by Elio and Séléné\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 to 10 |\n| Depends on | none |\n| Due | 2026-11-16 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan C0`.\n",
+      "labels": [
+        "area:design",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE2",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": "Merged on 2026-11-16: commit 4b22642 (pull request 5). Follow-up: Confirmation section of ADR-0001."
+    },
+    {
+      "id": "C1",
+      "title": "[C1] Bring the 29 project requirements into the repository as the single machine-readable source and rebaseline...",
+      "body": "**Objective.** Bring the 29 project requirements into the repository as the single machine-readable source and rebaseline them on the validated objectives\n\n**Deliverable.** `requirements/` source file (format per T6), its schema, generated page `docs/03-requirements.md`\n\n**Done when.** Each requirement has ID, text, verification method, OE trace and priority M, S or C; schema validation runs in CI; 0 requirement without OE trace; each OE has at least 1 requirement; the 7 inconsistencies of section 6, item 11 are each resolved or recorded as accepted\n\n| Field | Value |\n| --- | --- |\n| Required by | P1 p. 3; PF p. 10 (traceability with requirements); A0 p. 3 |\n| Depends on | A2 |\n| Due | 2026-11-20 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan C1`.\n",
+      "labels": [
+        "area:design",
+        "priority:must",
+        "sprint:1",
+        "status:waits-validation"
+      ],
+      "milestone": "OE2",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "C2",
+      "title": "[C2] Record the architecture decisions the team takes",
+      "body": "**Objective.** Record the architecture decisions the team takes\n\n**Deliverable.** ADRs in `docs/adr/` for T2, T4, T5, T6, T7, T8, T11, T12, T14\n\n**Done when.** At least 8 ADRs with status \"accepted\", each with at least 2 options considered, the decider, the date and at least 1 requirement ID; an ADR index page is generated automatically\n\n**Amendment of the reduced scope (S2).** At least 5 records in full form, the others short.\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 10 (cross references with ADRs); A0S slide 7 |\n| Depends on | T2 to T14 |\n| Due | 2026-11-22 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan C2`.\n",
+      "labels": [
+        "area:design",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE2",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "C3",
+      "title": "[C3] Set up spec-driven development with OpenSpec, if T2 selects it",
+      "body": "**Objective.** Set up spec-driven development with OpenSpec, if T2 selects it\n\n**Deliverable.** `openspec/` with specs derived from the requirements\n\n**Done when.** `openspec validate` passes in CI; every must requirement is referenced by at least 1 scenario\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 4 (OpenSpec or GitHub Copilot SDK as reference tools, \"no sólo prompts\") |\n| Depends on | C1, T2 |\n| Due | 2026-11-24 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 3 h |\n| Priority | S (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan C3`.\n",
+      "labels": [
+        "area:design",
+        "priority:should",
+        "sprint:2"
+      ],
+      "milestone": "OE2",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "C4",
+      "title": "[C4] Describe the architecture",
+      "body": "**Objective.** Describe the architecture\n\n**Deliverable.** `docs/02-architecture.md` with diagrams as code\n\n**Done when.** At least 3 views (context, components, sequence of one query); a matrix components x requirements with no empty row for must requirements and no component without requirement; each component cites its ADRs\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE2; PF p. 4 (system architecture), p. 10 |\n| Depends on | C1, C2 |\n| Due | 2026-11-25 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan C4`.\n",
+      "labels": [
+        "area:design",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE2",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "D1",
+      "title": "[D1] Check provenance and licence of every GPCA source",
+      "body": "**Objective.** Check provenance and licence of every GPCA source\n\n**Deliverable.** `data/gpca/PROVENANCE.md`\n\n**Done when.** One row per source with URL, access date, licence statement found or \"none stated\", and the handling chosen (linked, derived or copied); 0 file copied from a source without a licence that allows it\n\n| Field | Value |\n| --- | --- |\n| Required by | proposed (planteamiento: \"no license is stated\") |\n| Depends on | none |\n| Due | 2026-11-20 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan D1`.\n",
+      "labels": [
+        "area:data",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "D2",
+      "title": "[D2] Encode the safety requirements of the case study",
+      "body": "**Objective.** Encode the safety requirements of the case study\n\n**Deliverable.** `data/gpca/requirements.*` (format per T6)\n\n**Done when.** At least 20 requirements, each with ID, text and source reference (document and section); the file validates against its schema (ReqIF XSD if ReqIF is chosen) in CI\n\n**Amendment of the reduced scope (S2).** At least 12 requirements (scope S2).\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE3; PF p. 8 (ReqIF) |\n| Depends on | D1, T6 |\n| Due | 2026-11-24 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 1.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan D2`.\n",
+      "labels": [
+        "area:data",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "D3",
+      "title": "[D3] Write the SysML v2 logical model",
+      "body": "**Objective.** Write the SysML v2 logical model\n\n**Deliverable.** `data/gpca/model/*.sysml`\n\n**Done when.** The model parses with 0 error in CI with the parser chosen in T5; at least 10 part or port definitions; each of the requirements of D2 has at least 1 satisfy relationship, except those listed as intentionally unallocated\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE2, OE3; PF p. 8 (SysML v2) |\n| Depends on | D2, T5 |\n| Due | 2026-11-26 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 3.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan D3`.\n",
+      "labels": [
+        "area:data",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "D4",
+      "title": "[D4] Write the test cases and make them runnable",
+      "body": "**Objective.** Write the test cases and make them runnable\n\n**Deliverable.** `data/gpca/tests/` and, per T7, the executable target\n\n**Done when.** At least 20 test cases, each verifying at least 1 requirement; at least 2 requirements left without test on purpose and listed (needed by H4); one command runs all test cases and outputs pass or fail for each\n\n**Amendment of the reduced scope (S2).** At least 12 test cases (scope S2); 2 requirements still left without test on purpose.\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE3, OE4 (test execution tool) |\n| Depends on | D2, T7 |\n| Due | 2026-11-27 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 2.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan D4`.\n",
+      "labels": [
+        "area:data",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "D5",
+      "title": "[D5] Build the reference trace set",
+      "body": "**Objective.** Build the reference trace set\n\n**Deliverable.** `data/gpca/gold-links.csv`\n\n**Done when.** Every satisfies, verifies and depends-on link of the case study is a row; 100 % of rows carry the initials of a reviewer who is not the author; a script confirms that every ID in the file exists in D2, D3 or D4\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE5 (reference answers); proposed |\n| Depends on | D2, D3, D4 |\n| Due | 2026-11-28 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan D5`.\n",
+      "labels": [
+        "area:data",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "E1",
+      "title": "[E1] Define the digital thread ontology aligned with OSLC and SysML v2",
+      "body": "**Objective.** Define the digital thread ontology aligned with OSLC and SysML v2\n\n**Deliverable.** `ontology/*.ttl`, generated page `docs/04-ontology.md`\n\n**Done when.** Classes for requirement, model element, test case and test result; properties satisfies, verifies, depends-on; the file loads without error in CI; every term has a label and a comment; a table maps at least 5 terms to OSLC RM or QM terms; at least 10 competency questions each have a SPARQL file that returns at least 1 row on the case study\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE2; PF p. 8 (OWL, RDF, OSLC) |\n| Depends on | C2 |\n| Due | 2026-11-25 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 3.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan E1`.\n",
+      "labels": [
+        "area:ontology",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE2",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "E2",
+      "title": "[E2] Define the SHACL shapes",
+      "body": "**Objective.** Define the SHACL shapes\n\n**Deliverable.** `shapes/*.ttl` and negative fixtures\n\n**Done when.** The case study graph conforms (0 violation) in CI; at least 3 broken fixtures (missing ID, dangling link, wrong type) each produce exactly the expected violation in a test\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE2; PF p. 8 (SHACL) |\n| Depends on | E1 |\n| Due | 2026-11-27 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan E2`.\n",
+      "labels": [
+        "area:ontology",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE2",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "F1",
+      "title": "[F1] Create the code skeleton with one entry command",
+      "body": "**Objective.** Create the code skeleton with one entry command\n\n**Deliverable.** Package layout, dependency lock file, task runner\n\n**Done when.** On a fresh clone, one documented command installs dependencies and runs lint and an empty test suite with exit code 0 on Windows and Linux\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 (single command) |\n| Depends on | T12, T14 |\n| Due | 2026-11-21 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan F1`.\n",
+      "labels": [
+        "area:platform",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "F2",
+      "title": "[F2] Run tests in continuous integration",
+      "body": "**Objective.** Run tests in continuous integration\n\n**Deliverable.** `.github/workflows/ci.yml` with lint, unit and functional test jobs\n\n**Done when.** The workflow runs on every pull request; unit and functional tests are separate jobs; a failing test blocks the merge (shown once on a test pull request); line coverage is reported and a threshold fixed by the team (proposed: 80 %) fails the job when not met\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 8 (automated tests: unit and functional; build pipeline) |\n| Depends on | F1 |\n| Due | 2026-11-22 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan F2`.\n",
+      "labels": [
+        "area:platform",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "F3",
+      "title": "[F3] Publish source code quality metrics",
+      "body": "**Objective.** Publish source code quality metrics\n\n**Deliverable.** Generated page `docs/quality.md` (tool per T14)\n\n**Done when.** The page shows at least coverage, lint findings, cyclomatic complexity and duplication; it is regenerated by CI on each merge to main; its date matches the last main commit\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 (quality metrics of source code) |\n| Depends on | F2 |\n| Due | 2026-12-02 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 1.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan F3`.\n",
+      "labels": [
+        "area:platform",
+        "priority:must",
+        "sprint:3"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "F4",
+      "title": "[F4] Build and run the system on a clean machine automatically",
+      "body": "**Objective.** Build and run the system on a clean machine automatically\n\n**Deliverable.** Container files or equivalent per T12; CI job \"clean-room\"\n\n**Done when.** A CI job starts from an archive of the repository on a clean runner and, with one command, builds, runs the tests, generates the documentation, deploys and starts the application, then gets a successful response from its health endpoint\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 (build and deploy on a new machine; one command; no manual step) |\n| Depends on | F1, T12 |\n| Due | 2026-12-03 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 3.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan F4`.\n",
+      "labels": [
+        "area:platform",
+        "priority:must",
+        "sprint:3"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "F5",
+      "title": "[F5] Package and distribute on release",
+      "body": "**Objective.** Package and distribute on release\n\n**Deliverable.** Release workflow triggered by a version tag\n\n**Done when.** Pushing a test tag produces a GitHub Release with the built package or image and the documentation; the artifact starts with the command of F4\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 (packaging and distribution, CD) |\n| Depends on | F4 |\n| Due | 2026-12-04 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan F5`.\n",
+      "labels": [
+        "area:platform",
+        "priority:must",
+        "sprint:3"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "F6",
+      "title": "[F6] Scan for secrets and vulnerable dependencies",
+      "body": "**Objective.** Scan for secrets and vulnerable dependencies\n\n**Deliverable.** CI job\n\n**Done when.** The job fails on a planted fake secret (shown once) and passes on main\n\n| Field | Value |\n| --- | --- |\n| Required by | proposed (NFR-SEC-01 in P1D) |\n| Depends on | F2 |\n| Due | 2026-12-04 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 1 h |\n| Priority | S (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan F6`.\n",
+      "labels": [
+        "area:platform",
+        "priority:should",
+        "sprint:3"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "F7",
+      "title": "[F7] Generate the traceability matrix automatically",
+      "body": "**Objective.** Generate the traceability matrix automatically\n\n**Deliverable.** Script and generated page `docs/traceability.md`\n\n**Done when.** The page links each OE to its requirements, each requirement to ADRs, components, tests and last test result; CI fails if a must requirement has no test or if a test references an unknown requirement ID\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 10 (cross references between requirements, ADRs, components, tests); A0S slide 7 |\n| Depends on | C1, C2, F2 |\n| Due | 2026-11-29 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 2.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan F7`.\n",
+      "labels": [
+        "area:platform",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "G1",
+      "title": "[G1] Ingest requirements into the graph",
+      "body": "**Objective.** Ingest requirements into the graph\n\n**Deliverable.** Ingestion module and unit tests (FR-ING-01)\n\n**Done when.** Number of requirement nodes equals the number of requirements in D2 (asserted by a test); at least 3 unit tests including 1 malformed input\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE3; PF p. 7 (topic 10: connected to the engineering repository) |\n| Depends on | D2, E1, F1, T4 |\n| Due | 2026-11-26 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan G1`.\n",
+      "labels": [
+        "area:ingestion",
+        "priority:must",
+        "sprint:2",
+        "status:waits-validation"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "G2",
+      "title": "[G2] Ingest the SysML v2 model",
+      "body": "**Objective.** Ingest the SysML v2 model\n\n**Deliverable.** Ingestion module and unit tests (FR-ING-02)\n\n**Done when.** Each part, port and requirement usage of D3 is a node (count asserted by a test); each satisfy relationship of D3 is an edge; at least 3 unit tests\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE3 |\n| Depends on | D3, E1, F1, T5 |\n| Due | 2026-11-28 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 4 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan G2`.\n",
+      "labels": [
+        "area:ingestion",
+        "priority:must",
+        "sprint:2",
+        "status:waits-validation"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "G3",
+      "title": "[G3] Ingest test cases and results",
+      "body": "**Objective.** Ingest test cases and results\n\n**Deliverable.** Ingestion module and unit tests (FR-ING-03)\n\n**Done when.** Each test case is a node linked to the requirements it verifies; the set of links in the graph equals D5 exactly (asserted by a test); the graph passes E2\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE3 |\n| Depends on | D4, E1, F1 |\n| Due | 2026-11-28 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan G3`.\n",
+      "labels": [
+        "area:ingestion",
+        "priority:must",
+        "sprint:2",
+        "status:waits-validation"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "G4",
+      "title": "[G4] Re-ingest when an artifact changes",
+      "body": "**Objective.** Re-ingest when an artifact changes\n\n**Deliverable.** Trigger in CI or at start-up (FR-ING-04)\n\n**Done when.** A functional test changes one requirement text and observes the new text in the graph without manual step, within the delay fixed in C1\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 proposal, point 2; PF p. 7 |\n| Depends on | G1, G2, G3 |\n| Due | 2026-12-03 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 2 h |\n| Priority | S (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan G4`.\n",
+      "labels": [
+        "area:ingestion",
+        "priority:should",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE3",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H0",
+      "title": "[H0] Check the feasibility of the GitHub Copilot SDK with a time-boxed spike",
+      "body": "**Objective.** Check the feasibility of the GitHub Copilot SDK with a time-boxed spike\n\n**Deliverable.** Spike protocol and results\n\n**Done when.** Questions Q1 to Q3 of the spike protocol pass\n\n| Field | Value |\n| --- | --- |\n| Required by | proposed (decision T2) |\n| Depends on | none |\n| Due | 2026-11-18 |\n| Sprint | S1 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H0`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": "Done on 2026-11-16: questions Q1 to Q3 of the spike passed."
+    },
+    {
+      "id": "H1",
+      "title": "[H1] Implement the deterministic tools: search, trace, impact, test execution, coverage gaps",
+      "body": "**Objective.** Implement the deterministic tools: search, trace, impact, test execution, coverage gaps\n\n**Deliverable.** Tool library with schemas (OpenAPI or JSON Schema) and unit tests\n\n**Done when.** At least 5 tools; each has at least 3 unit tests; for at least 5 reference changes the impact tool returns exactly the set derived from D5; the 2 example queries of PF p. 7 (\"which requirements verify this component\", \"which tests are affected by this change\") are answered by tool calls alone\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 7 (queries on requirements, models, tests; actions through tools); A0 OE4 |\n| Depends on | G1, G2, G3 |\n| Due | 2026-11-29 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 5 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H1`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:2",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H2",
+      "title": "[H2] Implement the agent that selects tools and cites artifacts",
+      "body": "**Objective.** Implement the agent that selects tools and cites artifacts\n\n**Deliverable.** Agent module (stack per T2 and T11), functional tests\n\n**Done when.** On 5 smoke questions the answer cites exactly the expected IDs (functional test in CI, using the mode chosen in T11); every answer contains at least 1 artifact ID or the \"no supporting artifact\" reply\n\n**Amendment of the reduced scope (S2).** Was 7 h: the spike H0 prepared its configuration.\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 4 (generative AI mandatory), p. 7 (grounded answers); A0 OE4 |\n| Depends on | H1, T2, T11 |\n| Due | 2026-12-02 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 5.5 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H2`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H3",
+      "title": "[H3] Implement the guardrails",
+      "body": "**Objective.** Implement the guardrails\n\n**Deliverable.** Guardrail module and tests (FR-GRD-01 to 04, NFR-SEC-02)\n\n**Done when.** 5 tests pass: an answer citing a non-existent ID is blocked; a question without supporting artifact gets the fixed reply; without confirmation the repository is unchanged; a confirmed write adds exactly 1 log entry; an artifact containing an injected instruction does not change the tool calls\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE4; proposed (P1D) |\n| Depends on | H2 |\n| Due | 2026-12-03 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 3.5 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H3`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H4",
+      "title": "[H4] Generate a draft test case for an uncovered requirement, validated before being proposed",
+      "body": "**Objective.** Generate a draft test case for an uncovered requirement, validated before being proposed\n\n**Deliverable.** Generation tool and tests (FR-GEN-01, FR-GEN-04)\n\n**Done when.** For each of the 2 uncovered requirements of D4 a draft is produced and passes schema validation; an invalid draft injected in a test is rejected with its error shown; an accepted draft appears in the graph after re-ingestion\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 7 (artifact generation); A0 OE4 |\n| Depends on | H2, D4 |\n| Due | 2026-12-04 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H4`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H5",
+      "title": "[H5] Generate SysML v2 snippets and traceability reports",
+      "body": "**Objective.** Generate SysML v2 snippets and traceability reports\n\n**Deliverable.** Generation tools and tests (FR-GEN-02, FR-GEN-03)\n\n**Done when.** A snippet generated for 3 requirements parses with 0 error; the report for 5 requirements lists the same links as D5\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 7 (\"genera una propuesta de arquitectura a partir de estos requisitos\"); A0 OE4 |\n| Depends on | H4, T5 |\n| Due | 2026-12-05 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 3 h |\n| Priority | S (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H5`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:should",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H6",
+      "title": "[H6] Provide the baseline configuration: same LLM without graph or tools",
+      "body": "**Objective.** Provide the baseline configuration: same LLM without graph or tools\n\n**Deliverable.** Configuration switch\n\n**Done when.** One setting switches between \"copilot\" and \"LLM only\"; a test asserts that 0 tool is registered in \"LLM only\" mode\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 hypothesis and procedure |\n| Depends on | H2 |\n| Due | 2026-12-02 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H6`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H7",
+      "title": "[H7] Make the system runnable by an evaluator without credentials and with another model",
+      "body": "**Objective.** Make the system runnable by an evaluator without credentials and with another model\n\n**Deliverable.** Replay mode and provider configuration (per T11)\n\n**Done when.** With no credential set, the single command of F4 starts the application and the demonstration scenario of J4 passes in replay mode; changing the model or provider needs only environment settings, shown with 2 different models\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 (no manual intervention; teaching staff configures the AI for the final competition) |\n| Depends on | H2, T11 |\n| Due | 2026-12-04 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H7`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H8",
+      "title": "[H8] Provide a web chat",
+      "body": "**Objective.** Provide a web chat\n\n**Deliverable.** Web interface (per T8) and 1 browser test (FR-UI-01)\n\n**Done when.** A scripted browser test asks 1 question and reads an answer containing an artifact ID; the page is served by the command of F4\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE4; PF p. 7 (copilot as interface) |\n| Depends on | H2, T8 |\n| Due | 2026-12-04 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H8`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:must",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "H9",
+      "title": "[H9] Show the queried subgraph and the end-to-end trace",
+      "body": "**Objective.** Show the queried subgraph and the end-to-end trace\n\n**Deliverable.** Graph and trace view (FR-UI-02)\n\n**Done when.** For 1 question the view displays every cited artifact and its links, and 1 chain requirement, model element, test, result; checked by a browser test or 2 screenshots in the documentation\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 7 (traceability demonstration); A0 OE4 |\n| Depends on | H8 |\n| Due | 2026-12-06 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 5 h |\n| Priority | S (M must, S should) |\n\n**Gate.** Waits for the validation of the objectives by the professor (Activity 0, p. 2).\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan H9`.\n",
+      "labels": [
+        "area:copilot",
+        "priority:should",
+        "sprint:3",
+        "status:waits-validation"
+      ],
+      "milestone": "OE4",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "I1",
+      "title": "[I1] Write the reference questions with their reference answers",
+      "body": "**Objective.** Write the reference questions with their reference answers\n\n**Deliverable.** `eval/questions.*`\n\n**Done when.** 30 questions (or the number validated in A2), at least 8 each for traceability, impact and coverage; each has the set of expected artifact IDs; a script confirms every expected ID exists in the graph; 100 % reviewed by a member who did not write them; questions frozen by a tag before any copilot run\n\n**Amendment of the reduced scope (S2).** 20 questions (scope S2), at least 6 each for traceability, impact and coverage.\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE5; A0 p. 2 (field 12) |\n| Depends on | D5, A2 |\n| Due | 2026-11-29 |\n| Sprint | S2 |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan I1`.\n",
+      "labels": [
+        "area:evaluation",
+        "priority:must",
+        "sprint:2"
+      ],
+      "milestone": "OE5",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "I2",
+      "title": "[I2] Automate the metrics for the copilot and for the LLM without graph",
+      "body": "**Objective.** Automate the metrics for the copilot and for the LLM without graph\n\n**Deliverable.** `eval/` harness, results files, CI job (FR-EVAL-01, NFR-OPS-02)\n\n**Done when.** One command outputs time per question, precision, recall and hallucination rate for both configurations; 3 runs are stored with model name, date and commit; a unit test checks each metric on a hand-computed example; the CI job publishes the results table\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE5 (\"metrics computed automatically in CI\") |\n| Depends on | I1, H2, H6 |\n| Due | 2026-12-04 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 4.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan I2`.\n",
+      "labels": [
+        "area:evaluation",
+        "priority:must",
+        "sprint:3"
+      ],
+      "milestone": "OE5",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "I3",
+      "title": "[I3] Measure the manual baseline with participants outside the group (design per T9)",
+      "body": "**Objective.** Measure the manual baseline with participants outside the group (design per T9)\n\n**Deliverable.** `eval/protocol.md`, anonymized timing data\n\n**Done when.** Protocol written before the first session; at least 3 participants outside the group (or the number validated in A2), crossed order; raw data in the repository without names; each session has date and duration; recruitment confirmed by 2026-11-27\n\n**Amendment of the reduced scope (S2).** 3 participants outside the group, 10 questions each, crossed order.\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 planteamiento, procedure; A0 p. 2 (reference of comparison) |\n| Depends on | I1, H8, T9 |\n| Due | 2026-12-06 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 4 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan I3`.\n",
+      "labels": [
+        "area:evaluation",
+        "priority:must",
+        "sprint:3"
+      ],
+      "milestone": "OE5",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "I4",
+      "title": "[I4] Decide on the hypothesis and document it",
+      "body": "**Objective.** Decide on the hypothesis and document it\n\n**Deliverable.** `docs/05-evaluation.md`\n\n**Done when.** A table compares each metric with its threshold; one explicit verdict (accepted, rejected or partially supported) per threshold; number of participants and questions stated; at least 4 threats to validity; every number on the page is regenerated from files in `eval/` by a script\n\n| Field | Value |\n| --- | --- |\n| Required by | A0 OE5; A0 p. 6 (parameters allow acceptance or rejection); A0S slide 2 |\n| Depends on | I2, I3 |\n| Due | 2026-12-08 |\n| Sprint | S4 |\n| Effort (S2 baseline) | 2.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan I4`.\n",
+      "labels": [
+        "area:evaluation",
+        "priority:must",
+        "sprint:4"
+      ],
+      "milestone": "OE5",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "J1",
+      "title": "[J1] Complete the documentation site and include the process evidence inside the repository",
+      "body": "**Objective.** Complete the documentation site and include the process evidence inside the repository\n\n**Deliverable.** Pages: requirements, architecture, ADRs, ontology, user guide, operations guide, evaluation, traceability, quality, process, AI usage; generated API reference; export of issues, milestones and sprints\n\n**Done when.** `mkdocs build --strict` passes; a link checker reports 0 broken link; the navigation has the 11 pages; a script exports issues and sprints to a file under `docs/process/` dated at most 1 day before the delivery; translations follow T10\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 to 10 (no documentation outside the repository; generated automatically when possible) |\n| Depends on | C4, F3, F7, I4 |\n| Due | 2026-12-08 |\n| Sprint | S1 (1.5 h), S4 (1.5 h) |\n| Effort (S2 baseline) | 3 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan J1`.\n",
+      "labels": [
+        "area:docs-vv",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "J2",
+      "title": "[J2] Keep the AI usage log",
+      "body": "**Objective.** Keep the AI usage log\n\n**Deliverable.** `docs/ai-usage.md`\n\n**Done when.** At least 1 dated entry per sprint with tool, task and how the result was checked; the page states which decisions were taken by the group\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 4, p. 9; A0 p. 4 |\n| Depends on | none |\n| Due | weekly, last on 2026-12-09 |\n| Sprint | S1 to S4 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan J2`.\n",
+      "labels": [
+        "area:docs-vv",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "J3",
+      "title": "[J3] Produce the verification report",
+      "body": "**Objective.** Produce the verification report\n\n**Deliverable.** Generated `docs/verification-report.md`\n\n**Done when.** 100 % of must requirements have status \"verified\" with a link to a passing test or a recorded inspection; every requirement not verified is listed with its reason; the report is generated by CI from test results\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 1 (system verified; final verification 10 %) |\n| Depends on | F7, H3 |\n| Due | 2026-12-08 |\n| Sprint | S4 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan J3`.\n",
+      "labels": [
+        "area:docs-vv",
+        "priority:must",
+        "sprint:4"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "J4",
+      "title": "[J4] Script the end-to-end validation scenario",
+      "body": "**Objective.** Script the end-to-end validation scenario\n\n**Deliverable.** Functional test and demonstration script\n\n**Done when.** The scenario covers the 6 expected results of topic 10 (connected to the repository, queries on requirements, models and tests, artifact generation, action through a tool, grounded answer, traceability chain); it passes as a functional test in CI\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 1 (system validated), p. 7 (the 3 example queries and the expected results of topic 10) |\n| Depends on | H3, H4, H8 |\n| Due | 2026-12-07 |\n| Sprint | S4 |\n| Effort (S2 baseline) | 2.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan J4`.\n",
+      "labels": [
+        "area:docs-vv",
+        "priority:must",
+        "sprint:4"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "J5",
+      "title": "[J5] Rehearse the evaluator's path on a clean machine",
+      "body": "**Objective.** Rehearse the evaluator's path on a clean machine\n\n**Deliverable.** Rehearsal log in `docs/process/`\n\n**Done when.** A member who did not write F4 extracts the archive on a machine or container without the project installed and runs the single command: 0 manual step, total time recorded, all 6 actions succeed; any failure has an issue closed before K2\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 (clone, one command, build, test, document, deploy, run) |\n| Depends on | F4, K1 |\n| Due | 2026-12-08 |\n| Sprint | S4 |\n| Effort (S2 baseline) | 2 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan J5`.\n",
+      "labels": [
+        "area:docs-vv",
+        "priority:must",
+        "sprint:4"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "K1",
+      "title": "[K1] Freeze features and release",
+      "body": "**Objective.** Freeze features and release\n\n**Deliverable.** Tag `v1.0.0` on main\n\n**Done when.** After the freeze only pull requests of type fix, docs, test or chore are merged; the tag exists on the remote and its CI run is green\n\n| Field | Value |\n| --- | --- |\n| Required by | proposed |\n| Depends on | H1 to H8, I2 |\n| Due | 2026-12-06 (freeze), 2026-12-09 (tag) |\n| Sprint | S4 |\n| Effort (S2 baseline) | 0.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan K1`.\n",
+      "labels": [
+        "area:delivery",
+        "priority:must",
+        "sprint:4"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "K2",
+      "title": "[K2] Build and upload the delivery archive",
+      "body": "**Objective.** Build and upload the delivery archive\n\n**Deliverable.** `<GROUP_NAME>.tgz` in Aula Global (or a text file with a Google Drive link if too large)\n\n**Done when.** The archive is a clone at tag `v1.0.0` including `.git`; it contains no virtual environment, built site or secret; `git status` is clean after extraction; the command of F4 succeeds from the extracted copy; SHA-256 recorded; a second member confirms the upload receipt\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 |\n| Depends on | K1, J5 |\n| Due | 2026-12-10, hour to confirm |\n| Sprint | S4 |\n| Effort (S2 baseline) | 1.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan K2`.\n",
+      "labels": [
+        "area:delivery",
+        "priority:must",
+        "sprint:4"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "K3",
+      "title": "[K3] Prepare the defense and the panel vote",
+      "body": "**Objective.** Prepare the defense and the panel vote\n\n**Deliverable.** Slides, demonstration script, backup video, question sheet (all inside the repository)\n\n**Done when.** Slides cover problem, hypothesis, architecture, live demonstration, evaluation result, process evidence and individual roles; 2 timed rehearsals within 10 % of the allotted time (duration to obtain from the professor); a backup video of at most 3 minutes plays offline; a sheet lists at least 10 expected questions with answers; each member presents a part\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 1 (defense in week 14; panel vote 30 %) |\n| Depends on | I4, J4 |\n| Due | 2026-12-09 |\n| Sprint | S1 (1 h), S4 (4 h) |\n| Effort (S2 baseline) | 5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan K3`.\n",
+      "labels": [
+        "area:delivery",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Froostiez",
+        "Selen-e",
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "K4",
+      "title": "[K4] Prepare for the final competition",
+      "body": "**Objective.** Prepare for the final competition\n\n**Deliverable.** Checklist and dry run with another AI configuration\n\n**Done when.** The format of the competition is obtained from the professor and written in an issue; the J4 scenario passes with a model different from the development one\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 9 (teaching staff sets the AI configuration for the final competition) |\n| Depends on | H7 |\n| Due | 2026-12-06 |\n| Sprint | S3 |\n| Effort (S2 baseline) | 1.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan K4`.\n",
+      "labels": [
+        "area:delivery",
+        "priority:must",
+        "sprint:3"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "ebonnenfant"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "K5",
+      "title": "[K5] Prepare the individual contribution evidence",
+      "body": "**Objective.** Prepare the individual contribution evidence\n\n**Deliverable.** Generated `docs/process/contributions.md`\n\n**Done when.** For each member: issues closed, pull requests authored and reviewed, hours logged per block, generated by script; each member has authored and reviewed at least 1 pull request in each sprint\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 1 (role of each member, 360 evaluation, 10 %) |\n| Depends on | B3 |\n| Due | 2026-12-09 |\n| Sprint | S4 |\n| Effort (S2 baseline) | 1 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan K5`.\n",
+      "labels": [
+        "area:delivery",
+        "priority:must",
+        "sprint:4"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "K6",
+      "title": "[K6] Close the project",
+      "body": "**Objective.** Close the project\n\n**Deliverable.** Final retrospective in `docs/process/sprint-4.md`\n\n**Done when.** At least 3 lessons learned and the list of open issues with their status\n\n| Field | Value |\n| --- | --- |\n| Required by | proposed |\n| Depends on | K2 |\n| Due | 2026-12-10 |\n| Sprint | S4 |\n| Effort (S2 baseline) | 0.5 h |\n| Priority | S (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan K6`.\n",
+      "labels": [
+        "area:delivery",
+        "priority:should",
+        "sprint:4"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Selen-e"
+      ],
+      "closed_comment": null
+    },
+    {
+      "id": "L0",
+      "title": "[L0] Coordinate the team (leader)",
+      "body": "**Objective.** Coordinate the team (leader)\n\n**Deliverable.** Sprint reviews, decisions log\n\n**Done when.** One sprint review per sprint with its decisions recorded\n\n| Field | Value |\n| --- | --- |\n| Required by | PF p. 1 (team leader) |\n| Depends on | none |\n| Due | weekly, last on 2026-12-10 |\n| Sprint | S1 to S4 |\n| Effort (S2 baseline) | 3.5 h |\n| Priority | M (M must, S should) |\n\nSources: PF = PROYECTO_FINAL.pdf, A0 = Actividad0_Enunciado_Planteamiento.pdf, A0S = Actividad 0 slides, P1 = Practica 1. Commits of this step end with `Refs: plan L0`.\n",
+      "labels": [
+        "area:process",
+        "priority:must",
+        "sprint:1"
+      ],
+      "milestone": "Process and delivery",
+      "assignees": [
+        "Froostiez"
+      ],
+      "closed_comment": null
+    }
+  ]
+}
