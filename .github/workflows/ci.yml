@@ -1,0 +1,55 @@
+name: ci
+# Lint, unit tests and functional tests, as separate jobs (plan step F2).
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: python scripts/dev.py install
+      - run: python scripts/dev.py lint
+  unit:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: python scripts/dev.py install
+      # Fails when a test fails or when line coverage is under the threshold of pyproject.toml.
+      - run: python scripts/dev.py unit
+      - name: Publish the coverage table
+        if: always()
+        shell: bash
+        run: python -m coverage report --format=markdown >> "$GITHUB_STEP_SUMMARY" || true
+  functional:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: python scripts/dev.py install
+      - run: python scripts/dev.py functional

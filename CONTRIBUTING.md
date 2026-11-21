@@ -26,7 +26,15 @@ Each member works in a virtual environment local to the repository (`.venv/`, ig
     python -m pip install -r requirements-docs.txt
     ```
 
-4. Check the documentation before pushing:
+4. Install the development tools and run every check with one command:
+
+    ```powershell
+    python scripts/dev.py all
+    ```
+
+    Before each push, run the local checks of rule R5: `.\scripts\check.ps1`.
+
+5. Check the documentation before pushing:
 
     ```powershell
     python -m mkdocs build --strict

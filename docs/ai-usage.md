@@ -12,6 +12,7 @@ This page lists every use of generative AI in the project: tool, date, use, and 
 | 2026-11-16 | GitHub Copilot | Cross-check of the screening of the 11-record sample, run by Ferdinand Lacroix after both screeners had frozen their decisions | Rejected: the output applied neither the doubt rule nor the order of the criteria. It is used in no decision and is not part of the reported agreement |
 | 2026-11-16 | `qwen3:8b` on Ollama (local), with the GitHub Copilot SDK 1.0.34 | Feasibility spike of the copilot stack: here the model is a component under test, not a writing or coding assistant | Protocol written before the run; results read by Ferdinand Lacroix |
 | 2026-11-17 | Claude (Anthropic) | Labels, backlog of plan steps, issue forms, pull request template and setup script drafted by the assistant from the plan of the group | Reviewed, run and applied by Séléné Colle Conte |
+| 2026-11-22 | Claude (Anthropic) | Python skeleton, tests in CI and local check script: files drafted by the assistant from the decisions of the group | Read the 9 files and the edits of `.gitignore` and `CONTRIBUTING.md`; ran on Windows, Python 3.14.7: strict documentation build and translation check (pass), `python scripts/dev.py all` (OK, 4 unit tests, coverage 88 %, 2 functional tests), `scripts/check.ps1` (all checks passed); B5 evidence: one broken assertion makes `check.ps1` exit with code 1, file restored; no file changed. Applied by Séléné Colle Conte |
 
 ## Data sent to third-party AI services
 
