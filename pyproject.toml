@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digital-thread-copilot"
+version = "0.1.0"
+description = "Generative AI engineering copilot that queries and acts on a system's digital thread"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+dtc = "digital_thread_copilot.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+    "functional: runs the system through its command line or its interfaces",
+]
+
+[tool.coverage.run]
+source = ["digital_thread_copilot"]
+branch = true
+
+[tool.coverage.report]
+# Threshold proposed in plan step F2; the team can change it here.
+fail_under = 80
+show_missing = true
+
+[tool.ruff]
+line-length = 120
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+# Written before the linter was configured; one long report line.
+"scripts/screening_flow.py" = ["E501"]
