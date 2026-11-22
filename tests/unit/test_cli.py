@@ -8,7 +8,7 @@ from digital_thread_copilot.__main__ import build_parser, main
 
 def test_version_is_a_semantic_version():
     parts = __version__.split(".")
-    assert len(parts) == 3
+    assert len(parts) == 4
     assert all(part.isdigit() for part in parts)
 
 
