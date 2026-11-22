@@ -43,6 +43,7 @@ plugins:
             Architecture: Architecture
             Evaluation protocol: Protocole d'évaluation
             Quality: Qualité
+            Team: Équipe
         - locale: es
           name: Español
           build: true
@@ -55,6 +56,7 @@ plugins:
             Architecture: Arquitectura
             Evaluation protocol: Protocolo de evaluación
             Quality: Calidad
+            Team: Equipo
 markdown_extensions:
   - tables
   - admonition
@@ -74,3 +76,4 @@ nav:
   - Architecture: 02-architecture.md
   - Evaluation protocol: evaluation-protocol.md
   - Quality: quality.md
+  - Team: team.md

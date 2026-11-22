@@ -50,4 +50,4 @@ Each pull request of block H is reviewed by a member who is not its author; the 
 
 - Decision identifier in the project plan: T13. Decided by Ferdinand Lacroix on 2026-11-15 from the options above, which were prepared with an AI assistant (see [AI usage](../ai-usage.md)).
 - Requirements concerned: None (process decision). Identifiers are those of the project requirements v3 of Practica 1; they are rebaselined in step C1.
-- Leader named on 2026-11-15; split per member proposed the same day and to be confirmed by the team.
+- Leader named on 2026-11-15; split per member proposed the same day and confirmed in [Team](../team.md) on 2026-11-22: approval of the pull request by Séléné Colle Conte, agreement of Elio Bonnenfant reported by Ferdinand Lacroix (confirmation on GitHub to follow).
