@@ -1,0 +1,15 @@
+# Link checker configuration (plan step J1). Used by .github/workflows/links.yml
+# and locally: lychee --config lychee.toml "docs/**/*.md" README.md CONTRIBUTING.md
+max_retries = 2
+timeout = 20
+max_concurrency = 8
+# 429: rate limited by the publisher, not a broken link.
+accept = ["200..=299", "429"]
+exclude = [
+    # Local preview address quoted in CONTRIBUTING.md.
+    '^http://127\.0\.0\.1',
+    # Publishers that refuse automated requests; these links are checked by hand.
+    '^https://doi\.org/',
+    '^https://ieeexplore\.ieee\.org/',
+    '^https://www\.scopus\.com/',
+]
