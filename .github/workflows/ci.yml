@@ -53,3 +53,28 @@ jobs:
           cache-dependency-path: requirements-dev.txt
       - run: python scripts/dev.py install
       - run: python scripts/dev.py functional
+
+  vcrm:
+    # Verification matrix (plan step F7): every test is run once, the requirements it verifies are
+    # recorded, and the matrix is published in the run summary even when a test fails.
+    name: Verification matrix (VCRM)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: python scripts/dev.py install
+      - name: Run all tests and record the evidence per requirement
+        run: python -m pytest tests --req-evidence=reports/evidence.json --junitxml=reports/junit.xml
+      - name: Generate the verification matrix
+        if: always()
+        run: python scripts/vcrm.py --summary "$GITHUB_STEP_SUMMARY"
+      - name: Keep the reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-reports
+          path: reports/
