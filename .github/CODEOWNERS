@@ -1,0 +1,17 @@
+# Owners per area, as in the responsibility table of docs/team.md.
+# The last matching pattern wins.
+
+*                    @Froostiez
+/.github/            @Selen-e
+/scripts/            @Selen-e
+/tests/              @Selen-e
+/docs/               @Froostiez @Selen-e @ebonnenfant
+/docs/process/       @Selen-e
+/docs/adr/           @Froostiez
+/references/         @Froostiez
+/requirements/       @ebonnenfant
+/data/               @ebonnenfant
+/ontology/           @ebonnenfant
+/shapes/             @ebonnenfant
+/src/                @Froostiez
+/eval/               @ebonnenfant @Froostiez
