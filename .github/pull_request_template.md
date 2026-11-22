@@ -15,4 +15,5 @@ Refs: plan <ID>
 
 - [ ] The title still describes the content (after a rebase or a change of content: `gh pr edit <n> --title "..."`)
 - [ ] A teammate has approved; no bypass of the rules
+- [ ] The approval states what was checked (files read, checks run or seen)
 - [ ] Use of generative AI in this pull request is listed in `docs/ai-usage.md`, or there is none
