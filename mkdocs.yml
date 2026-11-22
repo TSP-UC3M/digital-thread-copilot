@@ -41,6 +41,7 @@ plugins:
             AI usage: Usage de l'IA
             Decisions: Décisions
             Architecture: Architecture
+            Evaluation protocol: Protocole d'évaluation
             Quality: Qualité
         - locale: es
           name: Español
@@ -52,6 +53,7 @@ plugins:
             AI usage: Uso de la IA
             Decisions: Decisiones
             Architecture: Arquitectura
+            Evaluation protocol: Protocolo de evaluación
             Quality: Calidad
 markdown_extensions:
   - tables
@@ -70,4 +72,5 @@ nav:
   - AI usage: ai-usage.md
   - Decisions: adr/index.md
   - Architecture: 02-architecture.md
+  - Evaluation protocol: evaluation-protocol.md
   - Quality: quality.md
