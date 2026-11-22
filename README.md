@@ -6,7 +6,7 @@ Generative AI engineering copilot that queries and acts on a system's digital th
 
 ## Hypothesis
 
-If an engineer queries the digital thread through an LLM copilot grounded in a knowledge graph and deterministic tools, then they answer traceability and impact questions at least 50 % faster and with an artifact recall of at least 90 % (compared to manual search across the artifacts and to an LLM without access to the graph).
+If traceability, impact and coverage questions on a digital thread are answered by an LLM copilot restricted to deterministic tools over a knowledge graph of the artifacts, then its answers cite the correct artifacts with a recall and a precision of at least 0.90 and a hallucination rate of at most 5 %, and with a significantly higher recall than the same LLM given all the artifacts as text in its context, without graph or tools (paired test on the same questions, p < 0.05).
 
 ## General objective
 

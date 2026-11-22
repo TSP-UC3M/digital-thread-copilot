@@ -4,7 +4,7 @@ Copilote d'ingénierie fondé sur l'IA générative qui interroge le fil numéri
 
 ## Hypothèse
 
-Si un ingénieur interroge le fil numérique via un copilote LLM fondé sur un graphe de connaissances et des outils déterministes, alors il répond aux questions de traçabilité et d'impact au moins 50 % plus vite et avec un rappel (recall) des artefacts d'au moins 90 % (par rapport à la recherche manuelle dans les artefacts et à un LLM sans accès au graphe).
+Si les questions de traçabilité, d'impact et de couverture sur un fil numérique sont traitées par un copilote LLM limité à des outils déterministes sur un graphe de connaissances des artefacts, alors ses réponses citent les bons artefacts avec un rappel (recall) et une précision d'au moins 0,90 et un taux d'hallucination d'au plus 5 %, et avec un rappel significativement plus élevé que celui du même LLM recevant tous les artefacts sous forme de texte dans son contexte, sans graphe ni outils (test apparié sur les mêmes questions, p < 0,05).
 
 ## Objectif général
 

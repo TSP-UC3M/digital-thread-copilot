@@ -4,7 +4,7 @@ Copiloto de ingeniería basado en IA generativa que consulta y actúa sobre el h
 
 ## Hipótesis
 
-Si un ingeniero consulta el hilo digital mediante un copiloto LLM fundamentado en un grafo de conocimiento y en herramientas deterministas, entonces responde a preguntas de trazabilidad e impacto al menos un 50 % más rápido y con una exhaustividad (recall) de artefactos de al menos el 90 % (respecto a la búsqueda manual en los artefactos y a un LLM sin acceso al grafo).
+Si las preguntas de trazabilidad, impacto y cobertura sobre un hilo digital se responden con un copiloto LLM limitado a herramientas deterministas sobre un grafo de conocimiento de los artefactos, entonces sus respuestas citan los artefactos correctos con una exhaustividad (recall) y una precisión de al menos 0,90 y una tasa de alucinación de como máximo el 5 %, y con una exhaustividad significativamente mayor que la del mismo LLM con todos los artefactos como texto en su contexto, sin grafo ni herramientas (prueba pareada sobre las mismas preguntas, p < 0,05).
 
 ## Objetivo general
 
