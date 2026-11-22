@@ -40,6 +40,7 @@ plugins:
             State of the art: État de l'art
             AI usage: Usage de l'IA
             Decisions: Décisions
+            Architecture: Architecture
         - locale: es
           name: Español
           build: true
@@ -49,14 +50,21 @@ plugins:
             State of the art: Estado de la cuestión
             AI usage: Uso de la IA
             Decisions: Decisiones
+            Architecture: Arquitectura
 markdown_extensions:
   - tables
   - admonition
   - toc:
       permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Home: index.md
   - Problem statement: 00-planteamiento.md
   - State of the art: 01-state-of-the-art.md
   - AI usage: ai-usage.md
   - Decisions: adr/index.md
+  - Architecture: 02-architecture.md
