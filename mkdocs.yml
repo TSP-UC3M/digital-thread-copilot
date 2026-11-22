@@ -41,6 +41,7 @@ plugins:
             AI usage: Usage de l'IA
             Decisions: Décisions
             Architecture: Architecture
+            Quality: Qualité
         - locale: es
           name: Español
           build: true
@@ -51,6 +52,7 @@ plugins:
             AI usage: Uso de la IA
             Decisions: Decisiones
             Architecture: Arquitectura
+            Quality: Calidad
 markdown_extensions:
   - tables
   - admonition
@@ -68,3 +70,4 @@ nav:
   - AI usage: ai-usage.md
   - Decisions: adr/index.md
   - Architecture: 02-architecture.md
+  - Quality: quality.md

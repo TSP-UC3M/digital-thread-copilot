@@ -1,0 +1,6 @@
+# Secret scan configuration (plan step F6, requirement NFR-SEC-01).
+# Default gitleaks rules; add an allowlist entry only with a comment giving the reason.
+title = "digital-thread-copilot"
+
+[extend]
+useDefault = true
