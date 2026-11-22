@@ -153,6 +153,8 @@ For the 42 other records, the two AI-assisted files gave the same decision on 39
 
 Of the 26 exclusions, 6 belong to the sample, 13 follow mechanically from the type or the year of the record (10 proceedings volumes outside the sample, 3 articles dated 2027), and 7 rest on a judgement made with AI assistance (R16, R17, R18, R19, R39, R44, R52); these 7 were re-read by the members.
 
+Sensitivity to the period. Three articles (R23, R24, R29) are dated 2027 by Scopus while their DOI carries the year 2026, which suggests that they were online in 2026; we did not check the publisher pages. They are excluded under inclusion criterion 3, as fixed before the screening, and we did not change this reading after seeing the results. Counting them by their online date would move 3 records out of the exclusions (23 instead of 26) and into the screening on the other criteria. If one of them proves essential, it can only come back through snowballing from a work kept, and is then counted under other methods.
+
 ### Threats to validity
 
 - Two databases and two strings: relevant works indexed elsewhere are found only through other methods. Only 2 of the 20 works with a DOI in the candidate list of 2026-10-29 are returned by the two databases.
@@ -166,16 +168,16 @@ Of the 26 exclusions, 6 belong to the sample, 13 follow mechanically from the ty
 
 ### Methodological references
 
-Checked on 2026-11-16. BibTeX entries: `docs/references.bib`.
+Checked on 2026-11-16; rankings of M5 and M6 and Google Scholar count of M2 read on 2026-11-22. BibTeX entries: `docs/references.bib`.
 
 | # | Reference | Type | Citations (source) | Venue quality | Verdict |
 | --- | --- | --- | --- | --- | --- |
 | M1 | M. J. Page et al., "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews," *BMJ*, vol. 372, n71, 2021, doi: [10.1136/bmj.n71](https://doi.org/10.1136/bmj.n71) | Journal article, peer reviewed | 194 613 (Google Scholar), 87 502 (Crossref) | SJR 2025: Q1 | Strong |
-| M2 | C. Wohlin, "Guidelines for snowballing in systematic literature studies and a replication in software engineering," in *Proc. 18th Int. Conf. Evaluation and Assessment in Software Engineering (EASE '14)*, 2014, pp. 1-10, doi: [10.1145/2601248.2601268](https://doi.org/10.1145/2601248.2601268) | Conference paper | 2 880 (Crossref) | ICORE2026: A | Strong |
+| M2 | C. Wohlin, "Guidelines for snowballing in systematic literature studies and a replication in software engineering," in *Proc. 18th Int. Conf. Evaluation and Assessment in Software Engineering (EASE '14)*, 2014, pp. 1-10, doi: [10.1145/2601248.2601268](https://doi.org/10.1145/2601248.2601268) | Conference paper | 7 847 (Google Scholar), 2 880 (Crossref) | ICORE2026: A | Strong |
 | M3 | B. Kitchenham and S. Charters, "Guidelines for performing systematic literature reviews in software engineering," version 2.3, Keele University and University of Durham, EBSE Tech. Rep. EBSE-2007-01, Jul. 2007. [Online]. Available: <https://www.elsevier.com/__data/promis_misc/525444systematicreviewsguide.pdf> | Technical report, not peer reviewed | Not in Crossref | Not applicable | Adequate |
 | M4 | B. A. Kitchenham, D. Budgen, and P. Brereton, *Evidence-Based Software Engineering and Systematic Reviews*. Boca Raton, FL, USA: CRC Press, 2016, ISBN 978-1-4822-2866-3 (electronic edition; the print edition is dated November 2015 by booksellers) | Book | Not applicable | Not applicable | Adequate |
-| M5 | J. Cohen, "A coefficient of agreement for nominal scales," *Educational and Psychological Measurement*, vol. 20, no. 1, pp. 37-46, 1960, doi: [10.1177/001316446002000104](https://doi.org/10.1177/001316446002000104) | Journal article | 32 214 (Crossref) | SJR quartile not read yet | Strong, pending the quartile |
-| M6 | T. B. Brown et al., "Language models are few-shot learners," in *Advances in Neural Information Processing Systems 33 (NeurIPS 2020)*, 2020, pp. 1877-1901, arXiv: [2005.14165](https://arxiv.org/abs/2005.14165) | Conference paper | Not in Crossref | CORE rank not read yet | Strong, pending the rank |
+| M5 | J. Cohen, "A coefficient of agreement for nominal scales," *Educational and Psychological Measurement*, vol. 20, no. 1, pp. 37-46, 1960, doi: [10.1177/001316446002000104](https://doi.org/10.1177/001316446002000104) | Journal article | 32 214 (Crossref) | SJR 2025: Q1 | Strong |
+| M6 | T. B. Brown et al., "Language models are few-shot learners," in *Advances in Neural Information Processing Systems 33 (NeurIPS 2020)*, 2020, pp. 1877-1901, arXiv: [2005.14165](https://arxiv.org/abs/2005.14165) | Conference paper | Not in Crossref | ICORE2026: A* | Strong |
 
 ## Quality criteria
 
@@ -213,7 +215,7 @@ Sorted by verdict, then by relevance.
 | 13 | Cibrián, Olivert-Iserte, Díez-Fenoy, Mendieta, Llorens, Álvarez-Rodríguez (2025). *Ensuring Semantic Consistency in SysML v2 Models Through Metamodel-Driven Validation*. IEEE Access 13:121444-121457. [10.1109/ACCESS.2025.3587786](https://doi.org/10.1109/ACCESS.2025.3587786) | Journal, open access | 12 | Q1 SJR / Q2 JCR *approx.* | Adequate | Semantic validation of generated SysML v2 |
 | 14 | Hey, Fuchß, Keim, Koziolek (2025). *Requirements Traceability Link Recovery via Retrieval-Augmented Generation*. REFSQ 2025, LNCS, pp. 381-397. [10.1007/978-3-031-88531-0_27](https://doi.org/10.1007/978-3-031-88531-0_27) | Conference | 17 | CORE rank to check | Adequate | Requirement-to-requirement trace links with LLMs |
 | 15 | Ali, Naganathan, Bork (2024). *Establishing Traceability Between Natural Language Requirements and Software Artifacts by Combining RAG and LLMs*. ER 2024, LNCS, pp. 295-314. [10.1007/978-3-031-75872-0_16](https://doi.org/10.1007/978-3-031-75872-0_16) | Conference | 17 | CORE A *approx.* | Adequate | Combines a knowledge-graph index with RAG |
-| 16 | Esho, Hoyt, Marshall, Gadewadikar (2026). *Artificial Intelligence Enabled Systems Engineering Modeling With Retrieval Augmented Generation*. Systems Engineering 29(3). [10.1002/sys.70032](https://doi.org/10.1002/sys.70032) | Journal (INCOSE) | 3 | Q1-Q2 *approx.* | Adequate | RAG applied to SE modeling |
+| 16 | Esho, Hoyt, Marshall, Gadewadikar (2026). *Artificial Intelligence Enabled Systems Engineering Modeling With Retrieval Augmented Generation*. Systems Engineering 29(3), pp. 444-457. [10.1002/sys.70032](https://doi.org/10.1002/sys.70032) | Journal (INCOSE) | 3 | Q1-Q2 *approx.* | Adequate | RAG applied to SE modeling |
 | 17 | Wang, Wang, Zhang, Ma, Shao, Chang (2025). *Automated Identification and Representation of System Requirements Based on LLMs and Knowledge Graphs*. Applied Sciences 15(7):3502. [10.3390/app15073502](https://doi.org/10.3390/app15073502) | Journal, open access | 13 | Q2 *approx.* | Adequate | Building a requirements knowledge graph with an LLM |
 | 18 | Apvrille, Sultan (2024). *System Architects Are not Alone Anymore: Automatic System Modeling with AI*. MODELSWARD 2024, pp. 27-38. [10.5220/0012320100003645](https://doi.org/10.5220/0012320100003645) | Conference | 29 | CORE rank to check | Adequate | LLM-generated SysML with a knowledge base and feedback loop |
 | 19 | Rafique, Shah, Dalecke, Grimm (2025). *Enhancing Model-Based Systems Engineering with Large Language Models*. INCOSE International Symposium 35(1). [10.1002/iis2.70067](https://doi.org/10.1002/iis2.70067) | Conference (INCOSE) | 9 | Not ranked in CORE | Adequate | SysML v2 generation, GPT-4 vs fine-tuned model |
