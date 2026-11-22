@@ -5,6 +5,7 @@
     python scripts/dev.py lint         static checks and formatting check
     python scripts/dev.py unit         unit tests with the coverage threshold
     python scripts/dev.py functional   functional tests
+    python scripts/dev.py vcrm         all tests with evidence, then reports/vcrm.md
     python scripts/dev.py check        lint, unit and functional tests
 
 Run it from the repository root, inside the virtual environment.
@@ -33,6 +34,10 @@ TASKS = {
 }
 TASKS["check"] = [*TASKS["lint"], *TASKS["unit"], *TASKS["functional"]]
 TASKS["all"] = [*TASKS["install"], *TASKS["check"]]
+TASKS["vcrm"] = [
+    [*PYTHON, "pytest", "tests", "--req-evidence=reports/evidence.json"],
+    [sys.executable, "scripts/vcrm.py"],
+]
 
 
 def main(argv: list[str]) -> int:
