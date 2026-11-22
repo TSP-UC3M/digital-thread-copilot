@@ -86,7 +86,7 @@ One task, one issue, one branch, one pull request.
     gh pr edit <number> --title "<type>(<scope>): <description>"
     ```
 
-9. Merge only when the checks pass (`commitlint`, `build`) and a teammate has approved the pull request. This holds for every member, including those whom the ruleset allows to bypass the review.
+9. Merge only when the seven required checks pass (`commitlint`, `build`, `lint`, `unit (ubuntu-latest)`, `unit (windows-latest)`, `functional`, `Verification matrix (VCRM)`, as in `.github/rulesets/protect-main.json`) and a teammate has approved the pull request with a note, as in rule 10. This holds for every member, including organization admins, whom the ruleset allows to bypass these rules on pull requests.
 10. The approval states what the reviewer checked: files read, checks run or seen, what was compared. An approval without a note is completed by a dated comment on the pull request after the merge. Adopted at the retrospective of sprint 1 (2026-11-22).
 
 `main` is protected: no direct push, no force push. Its history is never rewritten: a wrong commit title on `main` is recorded, not amended.
