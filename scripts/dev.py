@@ -5,6 +5,7 @@
     python scripts/dev.py lint         static checks and formatting check
     python scripts/dev.py unit         unit tests with the coverage threshold
     python scripts/dev.py functional   functional tests
+    python scripts/dev.py quality      unit tests, then docs/quality.md
     python scripts/dev.py vcrm         all tests with evidence, then reports/vcrm.md
     python scripts/dev.py check        lint, unit and functional tests
 
@@ -23,7 +24,7 @@ TASKS = {
     ],
     "lint": [
         [*PYTHON, "ruff", "check", "src", "tests", "scripts"],
-        [*PYTHON, "ruff", "format", "--check", "src", "tests", "scripts/dev.py"],
+        [*PYTHON, "ruff", "format", "--check", "src", "tests", "scripts/dev.py", "scripts/quality_report.py"],
     ],
     "unit": [
         [*PYTHON, "pytest", "tests/unit", "--cov", "--cov-report=term-missing", "--cov-report=xml"],
@@ -34,6 +35,7 @@ TASKS = {
 }
 TASKS["check"] = [*TASKS["lint"], *TASKS["unit"], *TASKS["functional"]]
 TASKS["all"] = [*TASKS["install"], *TASKS["check"]]
+TASKS["quality"] = [*TASKS["unit"], [sys.executable, "scripts/quality_report.py"]]
 TASKS["vcrm"] = [
     [*PYTHON, "pytest", "tests", "--req-evidence=reports/evidence.json"],
     [sys.executable, "scripts/vcrm.py"],
