@@ -39,11 +39,24 @@ plugins:
             Problem statement: Énoncé du problème
             State of the art: État de l'art
             AI usage: Usage de l'IA
-            Decisions: Décisions
+            Requirements: Exigences
+            Design: Conception
             Architecture: Architecture
+            Decisions: Décisions
+            Ontology: Ontologie
+            Guides: Guides
+            User guide: Guide d'utilisation
+            Operations guide: Guide d'exploitation
+            Evaluation: Évaluation
             Evaluation protocol: Protocole d'évaluation
+            Results: Résultats
+            Verification: Vérification
+            Traceability: Traçabilité
             Quality: Qualité
+            Project: Projet
+            Process: Processus
             Team: Équipe
+            Defense plan: Plan de soutenance
         - locale: es
           name: Español
           build: true
@@ -52,11 +65,24 @@ plugins:
             Problem statement: Planteamiento
             State of the art: Estado de la cuestión
             AI usage: Uso de la IA
-            Decisions: Decisiones
+            Requirements: Requisitos
+            Design: Diseño
             Architecture: Arquitectura
+            Decisions: Decisiones
+            Ontology: Ontología
+            Guides: Guías
+            User guide: Guía de uso
+            Operations guide: Guía de operación
+            Evaluation: Evaluación
             Evaluation protocol: Protocolo de evaluación
+            Results: Resultados
+            Verification: Verificación
+            Traceability: Trazabilidad
             Quality: Calidad
+            Project: Proyecto
+            Process: Proceso
             Team: Equipo
+            Defense plan: Plan de la defensa
 markdown_extensions:
   - tables
   - admonition
@@ -71,9 +97,23 @@ nav:
   - Home: index.md
   - Problem statement: 00-planteamiento.md
   - State of the art: 01-state-of-the-art.md
-  - AI usage: ai-usage.md
-  - Decisions: adr/index.md
-  - Architecture: 02-architecture.md
-  - Evaluation protocol: evaluation-protocol.md
-  - Quality: quality.md
-  - Team: team.md
+  - Requirements: 03-requirements.md
+  - Design:
+      - Architecture: 02-architecture.md
+      - Decisions: adr/index.md
+      - Ontology: 04-ontology.md
+  - Guides:
+      - User guide: user-guide.md
+      - Operations guide: operations.md
+  - Evaluation:
+      - Evaluation protocol: evaluation-protocol.md
+      - Results: 05-evaluation.md
+  - Verification:
+      - Traceability: traceability.md
+      - Quality: quality.md
+  - Project:
+      - Process: process/index.md
+      - Sprint 1: process/sprint-1.md
+      - Team: team.md
+      - Defense plan: defense/slide-plan.md
+      - AI usage: ai-usage.md
